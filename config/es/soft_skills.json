@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Liderazgo de Equipos",
+    "platform": "Coursera",
+    "url": "https://www.coursera.org/",
+    "type": "leadership",
+    "icon": "./icon/leadership.svg"
+  },
+  {
+    "name": "Comunicación Efectiva",
+    "platform": "Udemy",
+    "url": "https://www.udemy.com/",
+    "type": "communication",
+    "icon": "./icon/communication.svg"
+  },
+  {
+    "name": "Gestión del Tiempo",
+    "platform": "LinkedIn Learning",
+    "url": "https://www.linkedin.com/learning/",
+    "type": "productivity",
+    "icon": "./icon/time-management.svg"
+  },
+  {
+    "name": "Resolución de Problemas",
+    "platform": "edX",
+    "url": "https://www.edx.org/",
+    "type": "analytical",
+    "icon": "./icon/problem-solving.svg"
+  },
+  {
+    "name": "Trabajo en Equipo",
+    "platform": "Coursera",
+    "url": "https://www.coursera.org/",
+    "type": "collaboration",
+    "icon": "./icon/teamwork.svg"
+  },
+  {
+    "name": "Pensamiento Crítico",
+    "platform": "MasterClass",
+    "url": "https://www.masterclass.com/",
+    "type": "analytical",
+    "icon": "./icon/critical-thinking.svg"
+  }
+]

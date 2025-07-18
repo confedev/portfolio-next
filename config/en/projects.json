@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Website for Veterinary",
+    "description": "A complete web application for veterinary services with appointment system and patient management",
+    "url": "https://www.veterinaryservices.com",
+    "image": "./images/veterinary.png",
+    "sector": "healthcare"
+  },
+  {
+    "name": "Technology E-commerce",
+    "description": "E-commerce platform with shopping cart, payments and inventory management",
+    "url": "https://www.techstore.com",
+    "image": "./images/ecommerce.png",
+    "sector": "technology"
+  },
+  {
+    "name": "Financial Management App",
+    "description": "Mobile application for personal expense tracking and financial planning",
+    "url": "https://www.financeapp.com",
+    "image": "./images/finance.png",
+    "sector": "finance"
+  },
+  {
+    "name": "School Management System",
+    "description": "Comprehensive platform for educational institution administration",
+    "url": "https://www.schoolmanagement.com",
+    "image": "./images/education.png",
+    "sector": "education"
+  },
+  {
+    "name": "Analytics Dashboard",
+    "description": "Control panel for real-time business data and metrics visualization",
+    "url": "https://www.analytics-dashboard.com",
+    "image": "./images/analytics.png",
+    "sector": "analytics"
+  },
+  {
+    "name": "Social Network for Developers",
+    "description": "Social platform specialized for the software developer community",
+    "url": "https://www.devsocial.com",
+    "image": "./images/social.png",
+    "sector": "technology"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Sitio Web para Veterinaria",
+    "description": "Una aplicación web completa para servicios veterinarios con sistema de citas y gestión de pacientes",
+    "url": "https://www.veterinaryservices.com",
+    "image": "./images/veterinary.png",
+    "sector": "salud"
+  },
+  {
+    "name": "E-commerce de Tecnología",
+    "description": "Plataforma de comercio electrónico con carrito de compras, pagos y gestión de inventario",
+    "url": "https://www.techstore.com",
+    "image": "./images/ecommerce.png",
+    "sector": "tecnología"
+  },
+  {
+    "name": "App de Gestión Financiera",
+    "description": "Aplicación móvil para el seguimiento de gastos personales y planificación financiera",
+    "url": "https://www.financeapp.com",
+    "image": "./images/finance.png",
+    "sector": "finanzas"
+  },
+  {
+    "name": "Sistema de Gestión Escolar",
+    "description": "Plataforma integral para la administración de instituciones educativas",
+    "url": "https://www.schoolmanagement.com",
+    "image": "./images/education.png",
+    "sector": "educación"
+  },
+  {
+    "name": "Dashboard de Analytics",
+    "description": "Panel de control para visualización de datos y métricas empresariales en tiempo real",
+    "url": "https://www.analytics-dashboard.com",
+    "image": "./images/analytics.png",
+    "sector": "análisis"
+  },
+  {
+    "name": "Red Social para Desarrolladores",
+    "description": "Plataforma social especializada para la comunidad de desarrolladores de software",
+    "url": "https://www.devsocial.com",
+    "image": "./images/social.png",
+    "sector": "tecnología"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "AWS Certified Solutions Architect",
+    "platform": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/",
+    "type": "cloud",
+    "icon": "./icon/aws-cert.svg"
+  },
+  {
+    "name": "Google Cloud Professional Developer",
+    "platform": "Google Cloud",
+    "url": "https://cloud.google.com/certification",
+    "type": "cloud",
+    "icon": "./icon/gcp-cert.svg"
+  },
+  {
+    "name": "Certified Kubernetes Administrator",
+    "platform": "Cloud Native Computing Foundation",
+    "url": "https://www.cncf.io/certification/cka/",
+    "type": "containerization",
+    "icon": "./icon/k8s-cert.svg"
+  },
+  {
+    "name": "MongoDB Certified Developer",
+    "platform": "MongoDB University",
+    "url": "https://university.mongodb.com/",
+    "type": "database",
+    "icon": "./icon/mongodb-cert.svg"
+  },
+  {
+    "name": "Scrum Master Certified",
+    "platform": "Scrum Alliance",
+    "url": "https://www.scrumalliance.org/",
+    "type": "methodology",
+    "icon": "./icon/scrum-cert.svg"
+  },
+  {
+    "name": "React Developer Certification",
+    "platform": "Meta",
+    "url": "https://www.coursera.org/professional-certificates/meta-react-native",
+    "type": "frontend",
+    "icon": "./icon/react-cert.svg"
+  }
+]

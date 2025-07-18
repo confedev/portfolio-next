@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Team Leadership",
+    "platform": "Coursera",
+    "url": "https://www.coursera.org/",
+    "type": "leadership",
+    "icon": "./icon/leadership.svg"
+  },
+  {
+    "name": "Effective Communication",
+    "platform": "Udemy",
+    "url": "https://www.udemy.com/",
+    "type": "communication",
+    "icon": "./icon/communication.svg"
+  },
+  {
+    "name": "Time Management",
+    "platform": "LinkedIn Learning",
+    "url": "https://www.linkedin.com/learning/",
+    "type": "productivity",
+    "icon": "./icon/time-management.svg"
+  },
+  {
+    "name": "Problem Solving",
+    "platform": "edX",
+    "url": "https://www.edx.org/",
+    "type": "analytical",
+    "icon": "./icon/problem-solving.svg"
+  },
+  {
+    "name": "Teamwork",
+    "platform": "Coursera",
+    "url": "https://www.coursera.org/",
+    "type": "collaboration",
+    "icon": "./icon/teamwork.svg"
+  },
+  {
+    "name": "Critical Thinking",
+    "platform": "MasterClass",
+    "url": "https://www.masterclass.com/",
+    "type": "analytical",
+    "icon": "./icon/critical-thinking.svg"
+  }
+]
