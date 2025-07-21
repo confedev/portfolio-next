@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import {
   Moon,
   Sun,
@@ -23,21 +23,21 @@ import {
   Github,
   Linkedin,
   ExternalLink,
-} from "lucide-react";
-import { useTheme } from "next-themes";
-import Link from "next/link";
+} from 'lucide-react';
+import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from '@/components/ui/collapsible';
 
 interface TechSkill {
   tech: string;
@@ -118,120 +118,120 @@ interface Content {
 const content: Record<string, Content> = {
   es: {
     nav: {
-      about: "Sobre mí",
-      techSkills: "Habilidades Técnicas",
-      softSkills: "Habilidades Blandas",
-      certifications: "Certificaciones",
-      projects: "Proyectos",
-      contact: "Contacto",
+      about: 'Sobre mí',
+      techSkills: 'Habilidades Técnicas',
+      softSkills: 'Habilidades Blandas',
+      certifications: 'Certificaciones',
+      projects: 'Proyectos',
+      contact: 'Contacto',
     },
     hero: {
-      title: "Desarrollador Full Stack",
-      subtitle: "Construyendo el futuro con código",
+      title: 'Desarrollador Full Stack',
+      subtitle: 'Construyendo el futuro con código',
       description:
-        "Especializado en crear soluciones tecnológicas innovadoras con más de 5 años de experiencia en desarrollo web y móvil.",
+        'Especializado en crear soluciones tecnológicas innovadoras con más de 5 años de experiencia en desarrollo web y móvil.',
     },
     about: {
-      title: "Sobre mí",
+      title: 'Sobre mí',
       content:
-        "Soy un desarrollador apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web y móviles robustas y escalables. Mi enfoque se centra en escribir código limpio, mantenible y eficiente.",
+        'Soy un desarrollador apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web y móviles robustas y escalables. Mi enfoque se centra en escribir código limpio, mantenible y eficiente.',
     },
     techSkills: {
-      title: "Habilidades Técnicas",
-      all: "Todas",
+      title: 'Habilidades Técnicas',
+      all: 'Todas',
     },
     softSkills: {
-      title: "Habilidades Blandas",
-      all: "Todas",
+      title: 'Habilidades Blandas',
+      all: 'Todas',
     },
     certifications: {
-      title: "Certificaciones",
-      all: "Todas",
+      title: 'Certificaciones',
+      all: 'Todas',
     },
     projects: {
-      title: "Proyectos",
+      title: 'Proyectos',
     },
     contact: {
-      title: "Contacto",
-      email: "correo@ejemplo.com",
-      phone: "+1 234 567 890",
-      location: "Ciudad, País",
+      title: 'Contacto',
+      email: 'correo@ejemplo.com',
+      phone: '+1 234 567 890',
+      location: 'Ciudad, País',
     },
     filters: {
-      all: "Todas",
+      all: 'Todas',
     },
   },
   en: {
     nav: {
-      about: "About",
-      techSkills: "Tech Skills",
-      softSkills: "Soft Skills",
-      certifications: "Certifications",
-      projects: "Projects",
-      contact: "Contact",
+      about: 'About',
+      techSkills: 'Tech Skills',
+      softSkills: 'Soft Skills',
+      certifications: 'Certifications',
+      projects: 'Projects',
+      contact: 'Contact',
     },
     hero: {
-      title: "Full Stack Developer",
-      subtitle: "Building the future with code",
+      title: 'Full Stack Developer',
+      subtitle: 'Building the future with code',
       description:
-        "Specialized in creating innovative technological solutions with over 5 years of experience in web and mobile development.",
+        'Specialized in creating innovative technological solutions with over 5 years of experience in web and mobile development.',
     },
     about: {
-      title: "About Me",
+      title: 'About Me',
       content:
         "I'm a developer passionate about technology and innovation. I specialize in creating robust and scalable web and mobile applications. My focus is on writing clean, maintainable, and efficient code.",
     },
     techSkills: {
-      title: "Technical Skills",
-      all: "All",
+      title: 'Technical Skills',
+      all: 'All',
     },
     softSkills: {
-      title: "Soft Skills",
-      all: "All",
+      title: 'Soft Skills',
+      all: 'All',
     },
     certifications: {
-      title: "Certifications",
-      all: "All",
+      title: 'Certifications',
+      all: 'All',
     },
     projects: {
-      title: "Projects",
+      title: 'Projects',
     },
     contact: {
-      title: "Contact",
-      email: "email@example.com",
-      phone: "+1 234 567 890",
-      location: "City, Country",
+      title: 'Contact',
+      email: 'email@example.com',
+      phone: '+1 234 567 890',
+      location: 'City, Country',
     },
     filters: {
-      all: "All",
+      all: 'All',
     },
   },
 };
 
 /* === JSON datasets – Spanish === */
-import techSkillsEs from "../config/es/tech_skills.json";
-import softSkillsEs from "../config/es/soft_skills.json";
-import projectsEs from "../config/es/projects.json";
-import certsEs from "../config/es/certifications.json";
+import techSkillsEs from '../config/es/tech_skills.json';
+import softSkillsEs from '../config/es/soft_skills.json';
+import projectsEs from '../config/es/projects.json';
+import certsEs from '../config/es/certifications.json';
 
 /* === JSON datasets – English === */
-import techSkillsEn from "../config/en/tech_skills.json";
-import softSkillsEn from "../config/en/soft_skills.json";
-import projectsEn from "../config/en/projects.json";
-import certsEn from "../config/en/certifications.json";
+import techSkillsEn from '../config/en/tech_skills.json';
+import softSkillsEn from '../config/en/soft_skills.json';
+import projectsEn from '../config/en/projects.json';
+import certsEn from '../config/en/certifications.json';
 
 export default function Portfolio() {
   const { theme, setTheme } = useTheme();
-  const [language, setLanguage] = useState<"es" | "en">("es");
+  const [language, setLanguage] = useState<'es' | 'en'>('es');
   const [techSkills, setTechSkills] = useState<TechSkill[]>([]);
   const [softSkills, setSoftSkills] = useState<SoftSkill[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [certifications, setCertifications] = useState<Certification[]>([]);
-  const [techFilter, setTechFilter] = useState("all");
+  const [techFilter, setTechFilter] = useState('all');
   const [techSkillsOpen, setTechSkillsOpen] = useState(false);
   const [softSkillsOpen, setSoftSkillsOpen] = useState(false);
-  const [softSkillsFilter, setSoftSkillsFilter] = useState("all");
-  const [certificationsFilter, setCertificationsFilter] = useState("all");
+  const [softSkillsFilter, setSoftSkillsFilter] = useState('all');
+  const [certificationsFilter, setCertificationsFilter] = useState('all');
   const [isMounted, setIsMounted] = useState(false);
 
   const t = content[language];
@@ -264,15 +264,15 @@ export default function Portfolio() {
   }, [language]);
 
   const filteredTechSkills =
-    techFilter === "all"
+    techFilter === 'all'
       ? techSkills
       : techSkills.filter((skill) => skill.type === techFilter);
   const filteredSoftSkills =
-    softSkillsFilter === "all"
+    softSkillsFilter === 'all'
       ? softSkills
       : softSkills.filter((skill) => skill.type === softSkillsFilter);
   const filteredCertifications =
-    certificationsFilter === "all"
+    certificationsFilter === 'all'
       ? certifications
       : certifications.filter((cert) => cert.type === certificationsFilter);
 
@@ -286,7 +286,7 @@ export default function Portfolio() {
     return Array.from({ length: 5 }, (_, i) => (
       <span
         key={i}
-        className={`text-lg ${i < score ? "text-green-400" : "text-gray-600"}`}
+        className={`text-lg ${i < score ? 'text-green-400' : 'text-gray-600'}`}
       >
         ★
       </span>
@@ -298,7 +298,7 @@ export default function Portfolio() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-green-500/20 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-green-400">{"<DEV/>"}</div>
+          <div className="text-2xl font-bold text-green-400">{'<DEV/>'}</div>
 
           <nav className="hidden md:flex space-x-6">
             <a href="#about" className="hover:text-green-400 transition-colors">
@@ -340,7 +340,7 @@ export default function Portfolio() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setLanguage(language === "es" ? "en" : "es")}
+              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
               className="hover:bg-green-500/10"
             >
               <Globe className="h-4 w-4" />
@@ -348,11 +348,11 @@ export default function Portfolio() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="hover:bg-green-500/10"
             >
               {isMounted &&
-                (theme === "dark" ? (
+                (theme === 'dark' ? (
                   <Sun className="h-4 w-4" />
                 ) : (
                   <Moon className="h-4 w-4" />
@@ -367,7 +367,7 @@ export default function Portfolio() {
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5"></div>
         <div className="container mx-auto relative z-10">
           <div className="text-6xl font-bold mb-4 text-green-400 animate-pulse">
-            {">"}_
+            {'>'}_
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
             {t.hero.title}
@@ -426,8 +426,8 @@ export default function Portfolio() {
                 className="w-full justify-between border-green-500/20 hover:bg-green-500/10 bg-transparent mb-6"
               >
                 {techSkillsOpen
-                  ? "Contraer habilidades técnicas"
-                  : "Expandir habilidades técnicas"}
+                  ? 'Contraer habilidades técnicas'
+                  : 'Expandir habilidades técnicas'}
                 {techSkillsOpen ? (
                   <ChevronUp className="h-4 w-4" />
                 ) : (
@@ -510,7 +510,7 @@ export default function Portfolio() {
                 variant="outline"
                 className="w-full justify-between border-green-500/20 hover:bg-green-500/10 bg-transparent"
               >
-                {softSkillsOpen ? "Contraer lista" : "Expandir lista"}
+                {softSkillsOpen ? 'Contraer lista' : 'Expandir lista'}
                 {softSkillsOpen ? (
                   <ChevronUp className="h-4 w-4" />
                 ) : (

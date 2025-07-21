@@ -1,0 +1,20 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+
+# misc
+.DS_Store
+.vscode
+.idea
+.env
+.env.*
+.gitkeep
+
+#custom
+.nyc_output
+node_modules/
+package-lock.json
+README.md
+.eslintignore
+.husky/
+.prettierignore
