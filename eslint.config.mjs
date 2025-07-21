@@ -25,6 +25,7 @@ export default [
       '*.json',
       '.*ignore',
       '.npmrc',
+      '.next/',
     ],
   },
 ];
