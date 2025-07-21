@@ -9,7 +9,8 @@
     "start": "next start",
     "prepare": "husky install",
     "format": "prettier --write .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "echo 'No tests implemented yet.'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
