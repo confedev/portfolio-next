@@ -339,11 +339,12 @@ export default function Portfolio() {
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
-              size="icon"
+              size="sm"
               onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-              className="hover:bg-green-500/10"
+              className="hover:bg-green-500/10 font-mono flex items-center gap-1"
             >
-              <Globe className="h-4 w-4" />
+              <Globe className="h-3 w-3" />
+              {language === 'es' ? 'ES' : 'EN'}
             </Button>
             <Button
               variant="ghost"
