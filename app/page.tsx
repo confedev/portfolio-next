@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import { Content } from '@/config/text.type';
 import { content as contentEs } from '@/config/es/texts';
 import { content as contentEn } from '@/config/en/texts';
@@ -68,6 +69,7 @@ import certsEn from '../config/en/certifications.json';
 
 export default function Portfolio() {
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
   const [language, setLanguage] = useState<'es' | 'en'>('es');
   const [techSkills, setTechSkills] = useState<TechSkill[]>([]);
   const [softSkills, setSoftSkills] = useState<SoftSkill[]>([]);
@@ -88,27 +90,55 @@ export default function Portfolio() {
   useEffect(() => {
     setIsMounted(true);
 
-    // Detect system language or load from localStorage
+    // Function to get cookie value
+    const getCookie = (name: string): string | null => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop()?.split(';').shift() || null;
+      return null;
+    };
+
+    // Priority: Cookie > localStorage > Browser language
+    const cookieLanguage = getCookie('portfolio-language') as
+      | 'es'
+      | 'en'
+      | null;
     const savedLanguage = localStorage.getItem('portfolio-language') as
       | 'es'
       | 'en'
       | null;
-    if (savedLanguage) {
+
+    if (cookieLanguage) {
+      setLanguage(cookieLanguage);
+      // Sync localStorage with cookie
+      localStorage.setItem('portfolio-language', cookieLanguage);
+    } else if (savedLanguage) {
       setLanguage(savedLanguage);
+      // Set cookie to match localStorage
+      document.cookie = `portfolio-language=${savedLanguage}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Strict`;
     } else {
       // Detect browser language
       const browserLanguage = navigator.language.toLowerCase();
       const detectedLanguage = browserLanguage.startsWith('es') ? 'es' : 'en';
       setLanguage(detectedLanguage);
+      // Save detected language to both localStorage and cookie
+      localStorage.setItem('portfolio-language', detectedLanguage);
+      document.cookie = `portfolio-language=${detectedLanguage}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Strict`;
     }
 
     // Theme is already handled automatically by next-themes with localStorage
   }, []);
 
-  // Save language to localStorage when changed
+  // Save language to localStorage and cookies when changed
   const handleLanguageChange = (newLanguage: 'es' | 'en') => {
     setLanguage(newLanguage);
     localStorage.setItem('portfolio-language', newLanguage);
+
+    // Set cookie for server-side metadata generation
+    document.cookie = `portfolio-language=${newLanguage}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Strict`;
+
+    // Refresh the page to update metadata
+    router.refresh();
   };
 
   // Handle theme change and save it
