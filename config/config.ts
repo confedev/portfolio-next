@@ -1,13 +1,19 @@
 // Portfolio configuration settings
 export const config = {
-  // Maximum number of rows to show in collapsible content before enabling scroll
-  maxRowsInCollapsibleContent: 1,
+  // Maximum number of rows to show in collapsible content before enabling scroll for each section
+  maxRowsInCollapsibleContent: {
+    techSkills: 1,
+    softSkills: 2,
+    certifications: 2,
+    projects: 2,
+  },
 
   // Height per row in pixels for different sections (used to calculate scroll height)
   rowHeight: {
-    techSkills: 140, // Compact height per row for small tech skills cards
-    softSkills: 200, // Approximate height per row for soft skills cards
-    certifications: 240, // Approximate height per row for certification cards
+    techSkills: 160, // Compact height per row for small tech skills cards (including gaps)
+    softSkills: 220, // Approximate height per row for soft skills cards (including gaps)
+    certifications: 280, // Approximate height per row for certification cards (including gaps)
+    projects: 320, // Approximate height per row for project cards (including gaps)
   },
 
   // Grid configuration for different sections

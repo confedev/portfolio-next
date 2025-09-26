@@ -100,8 +100,10 @@ export default function Portfolio() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [certifications, setCertifications] = useState<Certification[]>([]);
   const [techFilter, setTechFilter] = useState('all');
-  const [techSkillsOpen, setTechSkillsOpen] = useState(false);
-  const [softSkillsOpen, setSoftSkillsOpen] = useState(false);
+  const [techSkillsOpen, setTechSkillsOpen] = useState(true);
+  const [softSkillsOpen, setSoftSkillsOpen] = useState(true);
+  const [certificationsOpen, setCertificationsOpen] = useState(true);
+  const [projectsOpen, setProjectsOpen] = useState(true);
   const [softSkillsFilter, setSoftSkillsFilter] = useState('all');
   const [certificationsFilter, setCertificationsFilter] = useState('all');
   const [isMounted, setIsMounted] = useState(false);
@@ -303,36 +305,15 @@ export default function Portfolio() {
       {/* Tech Skills Section - Modified to show all skills with expand/collapse */}
       <section id="tech-skills" className="py-16 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
-            {t.techSkills.title}
-          </h2>
-
-          <div className="mb-6 flex items-center gap-4">
-            <Filter className="h-5 w-5 text-green-400" />
-            <Select value={techFilter} onValueChange={setTechFilter}>
-              <SelectTrigger className="w-48 border-green-500/20">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">{t.techSkills.all}</SelectItem>
-                {techTypes.map((type) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
           <Collapsible open={techSkillsOpen} onOpenChange={setTechSkillsOpen}>
             <CollapsibleTrigger asChild>
               <Button
-                variant="outline"
-                className="w-full justify-between border-green-500/20 hover:bg-green-500/10 bg-transparent mb-6"
+                variant="ghost"
+                className="w-full justify-between p-0 h-auto text-left hover:bg-transparent"
               >
-                {techSkillsOpen
-                  ? 'Contraer habilidades técnicas'
-                  : 'Expandir habilidades técnicas'}
+                <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
+                  {t.techSkills.title}
+                </h2>
                 {techSkillsOpen ? (
                   <ChevronUp className="h-4 w-4" />
                 ) : (
@@ -341,11 +322,28 @@ export default function Portfolio() {
               </Button>
             </CollapsibleTrigger>
 
-            <CollapsibleContent>
+            <CollapsibleContent className="mt-4">
+              <div className="mb-6 flex items-center gap-4">
+                <Filter className="h-5 w-5 text-green-400" />
+                <Select value={techFilter} onValueChange={setTechFilter}>
+                  <SelectTrigger className="w-48 border-green-500/20">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">{t.techSkills.all}</SelectItem>
+                    {techTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
               <div
                 className={config.scrollbar.className}
                 style={{
-                  maxHeight: `${config.maxRowsInCollapsibleContent * config.rowHeight.techSkills}px`,
+                  maxHeight: `${config.maxRowsInCollapsibleContent.techSkills * config.rowHeight.techSkills}px`,
                 }}
               >
                 <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
@@ -389,37 +387,15 @@ export default function Portfolio() {
       {/* Soft Skills Section */}
       <section id="soft-skills" className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
-            {t.softSkills.title}
-          </h2>
-
-          <div className="mb-6 flex items-center gap-4">
-            <Filter className="h-5 w-5 text-green-400" />
-            <Select
-              value={softSkillsFilter}
-              onValueChange={setSoftSkillsFilter}
-            >
-              <SelectTrigger className="w-48 border-green-500/20">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">{t.softSkills.all}</SelectItem>
-                {softSkillTypes.map((type) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
           <Collapsible open={softSkillsOpen} onOpenChange={setSoftSkillsOpen}>
             <CollapsibleTrigger asChild>
               <Button
-                variant="outline"
-                className="w-full justify-between border-green-500/20 hover:bg-green-500/10 bg-transparent"
+                variant="ghost"
+                className="w-full justify-between p-0 h-auto text-left hover:bg-transparent"
               >
-                {softSkillsOpen ? 'Contraer lista' : 'Expandir lista'}
+                <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
+                  {t.softSkills.title}
+                </h2>
                 {softSkillsOpen ? (
                   <ChevronUp className="h-4 w-4" />
                 ) : (
@@ -427,11 +403,32 @@ export default function Portfolio() {
                 )}
               </Button>
             </CollapsibleTrigger>
+
             <CollapsibleContent className="mt-4">
+              <div className="mb-6 flex items-center gap-4">
+                <Filter className="h-5 w-5 text-green-400" />
+                <Select
+                  value={softSkillsFilter}
+                  onValueChange={setSoftSkillsFilter}
+                >
+                  <SelectTrigger className="w-48 border-green-500/20">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">{t.softSkills.all}</SelectItem>
+                    {softSkillTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
               <div
                 className={config.scrollbar.className}
                 style={{
-                  maxHeight: `${config.maxRowsInCollapsibleContent * config.rowHeight.softSkills}px`,
+                  maxHeight: `${config.maxRowsInCollapsibleContent.softSkills * config.rowHeight.softSkills}px`,
                 }}
               >
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -472,104 +469,156 @@ export default function Portfolio() {
       {/* Certifications Section */}
       <section id="certifications" className="py-16 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
-            {t.certifications.title}
-          </h2>
-
-          <div className="mb-6 flex items-center gap-4">
-            <Filter className="h-5 w-5 text-green-400" />
-            <Select
-              value={certificationsFilter}
-              onValueChange={setCertificationsFilter}
-            >
-              <SelectTrigger className="w-48 border-green-500/20">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">{t.certifications.all}</SelectItem>
-                {certificationTypes.map((type) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {filteredCertifications.map((cert, index) => (
-              <Card
-                key={index}
-                className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
+          <Collapsible
+            open={certificationsOpen}
+            onOpenChange={setCertificationsOpen}
+          >
+            <CollapsibleTrigger asChild>
+              <Button
+                variant="ghost"
+                className="w-full justify-between p-0 h-auto text-left hover:bg-transparent"
               >
-                <CardContent className="p-6">
-                  <Link href={cert.url} target="_blank" className="group">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
-                        <div className="text-lg">🏆</div>
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className="border-green-500/50 text-green-400"
-                      >
-                        {cert.type}
-                      </Badge>
-                    </div>
-                    <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
-                      {cert.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {cert.platform}
-                    </p>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
+                  {t.certifications.title}
+                </h2>
+                {certificationsOpen ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </Button>
+            </CollapsibleTrigger>
+
+            <CollapsibleContent className="mt-4">
+              <div className="mb-6 flex items-center gap-4">
+                <Filter className="h-5 w-5 text-green-400" />
+                <Select
+                  value={certificationsFilter}
+                  onValueChange={setCertificationsFilter}
+                >
+                  <SelectTrigger className="w-48 border-green-500/20">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">{t.certifications.all}</SelectItem>
+                    {certificationTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {type}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div
+                className={config.scrollbar.className}
+                style={{
+                  maxHeight: `${config.maxRowsInCollapsibleContent.certifications * config.rowHeight.certifications}px`,
+                }}
+              >
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {filteredCertifications.map((cert, index) => (
+                    <Card
+                      key={index}
+                      className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
+                    >
+                      <CardContent className="p-6">
+                        <Link href={cert.url} target="_blank" className="group">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
+                              <div className="text-lg">🏆</div>
+                            </div>
+                            <Badge
+                              variant="outline"
+                              className="border-green-500/50 text-green-400"
+                            >
+                              {cert.type}
+                            </Badge>
+                          </div>
+                          <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
+                            {cert.name}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {cert.platform}
+                          </p>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
-            {t.projects.title}
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors overflow-hidden"
+          <Collapsible open={projectsOpen} onOpenChange={setProjectsOpen}>
+            <CollapsibleTrigger asChild>
+              <Button
+                variant="ghost"
+                className="w-full justify-between p-0 h-auto text-left hover:bg-transparent"
               >
-                <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
-                  <div className="text-4xl">🚀</div>
+                <h2 className="text-3xl font-bold mb-8 text-green-400 border-l-4 border-green-400 pl-4">
+                  {t.projects.title}
+                </h2>
+                {projectsOpen ? (
+                  <ChevronUp className="h-4 w-4" />
+                ) : (
+                  <ChevronDown className="h-4 w-4" />
+                )}
+              </Button>
+            </CollapsibleTrigger>
+
+            <CollapsibleContent className="mt-4">
+              <div
+                className={config.scrollbar.className}
+                style={{
+                  maxHeight: `${config.maxRowsInCollapsibleContent.projects * config.rowHeight.projects}px`,
+                }}
+              >
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {projects.map((project, index) => (
+                    <Card
+                      key={index}
+                      className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors overflow-hidden"
+                    >
+                      <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+                        <div className="text-4xl">🚀</div>
+                      </div>
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg">
+                            {project.name}
+                          </CardTitle>
+                          <Badge
+                            variant="outline"
+                            className="border-green-500/50 text-green-400"
+                          >
+                            {project.sector}
+                          </Badge>
+                        </div>
+                        <CardDescription>{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <Link href={project.url} target="_blank">
+                          <Button
+                            variant="outline"
+                            className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent"
+                          >
+                            Ver Proyecto{' '}
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg">{project.name}</CardTitle>
-                    <Badge
-                      variant="outline"
-                      className="border-green-500/50 text-green-400"
-                    >
-                      {project.sector}
-                    </Badge>
-                  </div>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <Link href={project.url} target="_blank">
-                    <Button
-                      variant="outline"
-                      className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent"
-                    >
-                      Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </section>
 
