@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { AnimatedLogo } from '@/components/ui/animated-logo';
 import { Moon, Sun, Globe } from 'lucide-react';
 import { Content } from '@/config/text.type';
 
@@ -24,7 +25,8 @@ export function Header({
   return (
     <header className="sticky top-0 z-50 border-b border-green-500/20 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-green-400">{'<DEV/>'}</div>
+        {/* default, extended, neon, professional, dark */}
+        <AnimatedLogo theme="neon" />
 
         <nav className="hidden md:flex space-x-6">
           <a href="#about" className="hover:text-green-400 transition-colors">
