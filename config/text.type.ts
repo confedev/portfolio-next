@@ -15,6 +15,7 @@ export interface Content {
     title: string;
     subtitle: string;
     description: string;
+    typewriterPhrases: string[];
   };
   about: {
     title: string;

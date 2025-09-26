@@ -18,6 +18,11 @@ export const content: Content = {
     subtitle: 'Building the future with code',
     description:
       'Specialized in creating innovative technological solutions with over 5 years of experience in web and mobile development.',
+    typewriterPhrases: [
+      'console.log("Hello World");',
+      'npm start',
+      'git push origin main',
+    ],
   },
   about: {
     title: 'About Me',

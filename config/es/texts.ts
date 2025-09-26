@@ -18,6 +18,11 @@ export const content: Content = {
     subtitle: 'Construyendo el futuro con código',
     description:
       'Especializado en crear soluciones tecnológicas innovadoras con más de 5 años de experiencia en desarrollo web y móvil.',
+    typewriterPhrases: [
+      'console.log("Hola Mundo");',
+      'npm run build',
+      'git commit -m "feat: nueva función"',
+    ],
   },
   about: {
     title: 'Sobre mí',

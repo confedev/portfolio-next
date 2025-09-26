@@ -29,6 +29,14 @@ export const config = {
     className:
       'overflow-y-auto scrollbar-thin scrollbar-thumb-green-500/50 scrollbar-track-transparent',
   },
+
+  // Typewriter animation configuration for hero section
+  typewriter: {
+    typingSpeed: 100, // milliseconds per character
+    deletingSpeed: 50, // milliseconds per character when deleting
+    pauseTime: 2000, // milliseconds to pause between phrases
+    loop: true, // whether to loop through phrases continuously
+  },
 } as const;
 
 export type Config = typeof config;
