@@ -41,6 +41,7 @@ import {
 import { Content } from '@/config/text.type';
 import { content as contentEs } from '@/config/es/texts';
 import { content as contentEn } from '@/config/en/texts';
+import { config } from '@/config/config';
 
 interface TechSkill {
   tech: string;
@@ -341,40 +342,44 @@ export default function Portfolio() {
             </CollapsibleTrigger>
 
             <CollapsibleContent>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {filteredTechSkills.map((skill, index) => (
-                  <Card
-                    key={index}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
-                  >
-                    <CardContent className="p-6 flex flex-col items-center text-center">
-                      <Link
-                        href={skill.url}
-                        target="_blank"
-                        className="group w-full"
-                      >
-                        <div className="w-16 h-16 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
-                          <div className="text-3xl">⚡</div>
-                        </div>
-                        <h3 className="font-semibold mb-2 text-green-400 group-hover:text-green-300 transition-colors">
-                          {skill.tech}
-                        </h3>
-                        <div className="flex justify-center mb-2">
-                          {renderStars(skill.score)}
-                        </div>
-                        <Badge
-                          variant="outline"
-                          className="border-green-500/50 text-green-400 mb-2"
+              <div
+                className={config.scrollbar.className}
+                style={{
+                  maxHeight: `${config.maxRowsInCollapsibleContent * config.rowHeight.techSkills}px`,
+                }}
+              >
+                <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+                  {filteredTechSkills.map((skill, index) => (
+                    <Card
+                      key={index}
+                      className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
+                    >
+                      <CardContent className="p-3 flex flex-col items-center text-center">
+                        <Link
+                          href={skill.url}
+                          target="_blank"
+                          className="group w-full"
                         >
-                          {skill.type}
-                        </Badge>
-                        <div className="flex items-center justify-center gap-1 text-sm text-green-300 opacity-0 group-hover:opacity-100 transition-opacity">
-                          Ver más <ExternalLink className="h-3 w-3" />
-                        </div>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
+                          <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
+                            <div className="text-lg">⚡</div>
+                          </div>
+                          <h3 className="font-medium text-xs mb-1 text-green-400 group-hover:text-green-300 transition-colors leading-tight">
+                            {skill.tech}
+                          </h3>
+                          <div className="flex justify-center mb-1 scale-75">
+                            {renderStars(skill.score)}
+                          </div>
+                          <Badge
+                            variant="outline"
+                            className="border-green-500/50 text-green-400 text-xs px-1 py-0"
+                          >
+                            {skill.type}
+                          </Badge>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </CollapsibleContent>
           </Collapsible>
@@ -423,34 +428,41 @@ export default function Portfolio() {
               </Button>
             </CollapsibleTrigger>
             <CollapsibleContent className="mt-4">
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {filteredSoftSkills.map((skill, index) => (
-                  <Card
-                    key={index}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
-                  >
-                    <CardContent className="p-4">
-                      <Link
-                        href={skill.url}
-                        target="_blank"
-                        className="flex items-center gap-3 group"
-                      >
-                        <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
-                          <div className="text-sm">💡</div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold group-hover:text-green-400 transition-colors">
-                            {skill.name}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {skill.platform}
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
+              <div
+                className={config.scrollbar.className}
+                style={{
+                  maxHeight: `${config.maxRowsInCollapsibleContent * config.rowHeight.softSkills}px`,
+                }}
+              >
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {filteredSoftSkills.map((skill, index) => (
+                    <Card
+                      key={index}
+                      className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
+                    >
+                      <CardContent className="p-4">
+                        <Link
+                          href={skill.url}
+                          target="_blank"
+                          className="flex items-center gap-3 group"
+                        >
+                          <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
+                            <div className="text-sm">💡</div>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-semibold group-hover:text-green-400 transition-colors">
+                              {skill.name}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {skill.platform}
+                            </p>
+                          </div>
+                          <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </CollapsibleContent>
           </Collapsible>
