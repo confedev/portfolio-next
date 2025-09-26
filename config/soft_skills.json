@@ -1,0 +1,80 @@
+[
+  {
+    "name": {
+      "en": "Team Leadership",
+      "es": "Liderazgo de Equipos"
+    },
+    "platform": "Coursera",
+    "url": "https://www.coursera.org/",
+    "type": {
+      "en": "leadership",
+      "es": "liderazgo"
+    },
+    "icon": "./icon/leadership.svg"
+  },
+  {
+    "name": {
+      "en": "Effective Communication",
+      "es": "Comunicación Efectiva"
+    },
+    "platform": "Udemy",
+    "url": "https://www.udemy.com/",
+    "type": {
+      "en": "communication",
+      "es": "comunicación"
+    },
+    "icon": "./icon/communication.svg"
+  },
+  {
+    "name": {
+      "en": "Time Management",
+      "es": "Gestión del Tiempo"
+    },
+    "platform": "LinkedIn Learning",
+    "url": "https://www.linkedin.com/learning/",
+    "type": {
+      "en": "productivity",
+      "es": "productividad"
+    },
+    "icon": "./icon/time-management.svg"
+  },
+  {
+    "name": {
+      "en": "Problem Solving",
+      "es": "Resolución de Problemas"
+    },
+    "platform": "edX",
+    "url": "https://www.edx.org/",
+    "type": {
+      "en": "analytical",
+      "es": "analítico"
+    },
+    "icon": "./icon/problem-solving.svg"
+  },
+  {
+    "name": {
+      "en": "Creative Thinking",
+      "es": "Pensamiento Creativo"
+    },
+    "platform": "Skillshare",
+    "url": "https://www.skillshare.com/",
+    "type": {
+      "en": "creativity",
+      "es": "creatividad"
+    },
+    "icon": "./icon/creative-thinking.svg"
+  },
+  {
+    "name": {
+      "en": "Emotional Intelligence",
+      "es": "Inteligencia Emocional"
+    },
+    "platform": "MasterClass",
+    "url": "https://www.masterclass.com/",
+    "type": {
+      "en": "emotional",
+      "es": "emocional"
+    },
+    "icon": "./icon/emotional-intelligence.svg"
+  }
+]

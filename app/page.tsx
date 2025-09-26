@@ -3,9 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
-import { Content } from '@/config/text.type';
-import { content as contentEs } from '@/config/es/texts';
-import { content as contentEn } from '@/config/en/texts';
+import { TechSkill, SoftSkill, Project, Certification } from '@/config/types';
+import { content } from '@/config/content';
 import {
   Header,
   HeroSection,
@@ -18,7 +17,14 @@ import {
   Footer,
 } from '@/components/page';
 
-interface TechSkill {
+/* === Bilingual JSON datasets === */
+import techSkillsData from '../config/tech_skills.json';
+import softSkillsData from '../config/soft_skills.json';
+import projectsData from '../config/projects.json';
+import certificationsData from '../config/certifications.json';
+
+// Transformed types for component consumption
+interface TransformedTechSkill {
   tech: string;
   icon: string;
   url: string;
@@ -26,7 +32,7 @@ interface TechSkill {
   type: string;
 }
 
-interface SoftSkill {
+interface TransformedSoftSkill {
   name: string;
   platform: string;
   url: string;
@@ -34,7 +40,7 @@ interface SoftSkill {
   icon: string;
 }
 
-interface Project {
+interface TransformedProject {
   name: string;
   description: string;
   url: string;
@@ -42,7 +48,7 @@ interface Project {
   sector: string;
 }
 
-interface Certification {
+interface TransformedCertification {
   name: string;
   platform: string;
   url: string;
@@ -50,31 +56,16 @@ interface Certification {
   icon: string;
 }
 
-const content: Record<string, Content> = {
-  es: contentEs,
-  en: contentEn,
-};
-
-/* === JSON datasets – Spanish === */
-import techSkillsEs from '../config/es/tech_skills.json';
-import softSkillsEs from '../config/es/soft_skills.json';
-import projectsEs from '../config/es/projects.json';
-import certsEs from '../config/es/certifications.json';
-
-/* === JSON datasets – English === */
-import techSkillsEn from '../config/en/tech_skills.json';
-import softSkillsEn from '../config/en/soft_skills.json';
-import projectsEn from '../config/en/projects.json';
-import certsEn from '../config/en/certifications.json';
-
 export default function Portfolio() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
   const [language, setLanguage] = useState<'es' | 'en'>('es');
-  const [techSkills, setTechSkills] = useState<TechSkill[]>([]);
-  const [softSkills, setSoftSkills] = useState<SoftSkill[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [certifications, setCertifications] = useState<Certification[]>([]);
+  const [techSkills, setTechSkills] = useState<TransformedTechSkill[]>([]);
+  const [softSkills, setSoftSkills] = useState<TransformedSoftSkill[]>([]);
+  const [projects, setProjects] = useState<TransformedProject[]>([]);
+  const [certifications, setCertifications] = useState<
+    TransformedCertification[]
+  >([]);
   const [techFilter, setTechFilter] = useState('all');
   const [techSkillsOpen, setTechSkillsOpen] = useState(true);
   const [softSkillsOpen, setSoftSkillsOpen] = useState(true);
@@ -149,26 +140,44 @@ export default function Portfolio() {
   };
 
   useEffect(() => {
-    const datasets = {
-      es: {
-        tech: techSkillsEs,
-        soft: softSkillsEs,
-        projects: projectsEs,
-        certs: certsEs,
-      },
-      en: {
-        tech: techSkillsEn,
-        soft: softSkillsEn,
-        projects: projectsEn,
-        certs: certsEn,
-      },
-    } as const;
+    // Transform bilingual data to current language format
+    const transformTechSkills = (data: TechSkill[]): TransformedTechSkill[] =>
+      data.map((skill) => ({
+        ...skill,
+        type: skill.type[language],
+      }));
 
-    // Populate state directly from in-memory JSON
-    setTechSkills(datasets[language].tech);
-    setSoftSkills(datasets[language].soft);
-    setProjects(datasets[language].projects);
-    setCertifications(datasets[language].certs);
+    const transformSoftSkills = (data: SoftSkill[]): TransformedSoftSkill[] =>
+      data.map((skill) => ({
+        ...skill,
+        name: skill.name[language],
+        type: skill.type[language],
+      }));
+
+    const transformProjects = (data: Project[]): TransformedProject[] =>
+      data.map((project) => ({
+        ...project,
+        name: project.name[language],
+        description: project.description[language],
+        sector: project.sector[language],
+      }));
+
+    const transformCertifications = (
+      data: Certification[],
+    ): TransformedCertification[] =>
+      data.map((cert) => ({
+        ...cert,
+        name: cert.name[language],
+        type: cert.type[language],
+      }));
+
+    // Populate state with transformed data
+    setTechSkills(transformTechSkills(techSkillsData as TechSkill[]));
+    setSoftSkills(transformSoftSkills(softSkillsData as SoftSkill[]));
+    setProjects(transformProjects(projectsData as Project[]));
+    setCertifications(
+      transformCertifications(certificationsData as Certification[]),
+    );
   }, [language]);
 
   const filteredTechSkills =

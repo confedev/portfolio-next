@@ -1,0 +1,98 @@
+[
+  {
+    "name": {
+      "en": "Website for Veterinary",
+      "es": "Sitio Web para Veterinaria"
+    },
+    "description": {
+      "en": "A complete web application for veterinary services with appointment system and patient management",
+      "es": "Una aplicación web completa para servicios veterinarios con sistema de citas y gestión de pacientes"
+    },
+    "url": "https://www.veterinaryservices.com",
+    "image": "./images/veterinary.png",
+    "sector": {
+      "en": "healthcare",
+      "es": "salud"
+    }
+  },
+  {
+    "name": {
+      "en": "Technology E-commerce",
+      "es": "E-commerce de Tecnología"
+    },
+    "description": {
+      "en": "E-commerce platform with shopping cart, payments and inventory management",
+      "es": "Plataforma de comercio electrónico con carrito de compras, pagos y gestión de inventario"
+    },
+    "url": "https://www.techstore.com",
+    "image": "./images/ecommerce.png",
+    "sector": {
+      "en": "technology",
+      "es": "tecnología"
+    }
+  },
+  {
+    "name": {
+      "en": "Financial Management App",
+      "es": "App de Gestión Financiera"
+    },
+    "description": {
+      "en": "Mobile application for personal expense tracking and financial planning",
+      "es": "Aplicación móvil para el seguimiento de gastos personales y planificación financiera"
+    },
+    "url": "https://www.financeapp.com",
+    "image": "./images/finance.png",
+    "sector": {
+      "en": "finance",
+      "es": "finanzas"
+    }
+  },
+  {
+    "name": {
+      "en": "School Management System",
+      "es": "Sistema de Gestión Escolar"
+    },
+    "description": {
+      "en": "Comprehensive platform for educational institution administration",
+      "es": "Plataforma integral para la administración de instituciones educativas"
+    },
+    "url": "https://www.schoolmanagement.com",
+    "image": "./images/education.png",
+    "sector": {
+      "en": "education",
+      "es": "educación"
+    }
+  },
+  {
+    "name": {
+      "en": "Analytics Dashboard",
+      "es": "Dashboard de Analytics"
+    },
+    "description": {
+      "en": "Control panel for real-time business data and metrics visualization",
+      "es": "Panel de control para visualización de datos y métricas empresariales en tiempo real"
+    },
+    "url": "https://www.analytics-dashboard.com",
+    "image": "./images/analytics.png",
+    "sector": {
+      "en": "analytics",
+      "es": "análisis"
+    }
+  },
+  {
+    "name": {
+      "en": "Social Network for Developers",
+      "es": "Red Social para Desarrolladores"
+    },
+    "description": {
+      "en": "Social platform specialized for the software developer community",
+      "es": "Plataforma social especializada para la comunidad de desarrolladores de software"
+    },
+    "url": "https://www.devsocial.com",
+    "image": "./images/social.png",
+    "sector": {
+      "en": "technology",
+      "es": "tecnología"
+    }
+  }
+]

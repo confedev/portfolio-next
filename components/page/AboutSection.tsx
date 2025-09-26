@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Content } from '@/config/text.type';
+import { Content } from '@/config/types';
 
 interface AboutSectionProps {
   t: Content;

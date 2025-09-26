@@ -1,0 +1,80 @@
+[
+  {
+    "name": {
+      "en": "AWS Certified Solutions Architect",
+      "es": "AWS Certified Solutions Architect"
+    },
+    "platform": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/",
+    "type": {
+      "en": "cloud",
+      "es": "nube"
+    },
+    "icon": "./icon/aws-cert.svg"
+  },
+  {
+    "name": {
+      "en": "Google Cloud Professional Developer",
+      "es": "Google Cloud Professional Developer"
+    },
+    "platform": "Google Cloud",
+    "url": "https://cloud.google.com/certification",
+    "type": {
+      "en": "cloud",
+      "es": "nube"
+    },
+    "icon": "./icon/gcp-cert.svg"
+  },
+  {
+    "name": {
+      "en": "Certified Kubernetes Administrator",
+      "es": "Certified Kubernetes Administrator"
+    },
+    "platform": "Cloud Native Computing Foundation",
+    "url": "https://www.cncf.io/certification/cka/",
+    "type": {
+      "en": "containerization",
+      "es": "contenedores"
+    },
+    "icon": "./icon/k8s-cert.svg"
+  },
+  {
+    "name": {
+      "en": "MongoDB Certified Developer",
+      "es": "MongoDB Certified Developer"
+    },
+    "platform": "MongoDB University",
+    "url": "https://university.mongodb.com/",
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    },
+    "icon": "./icon/mongodb-cert.svg"
+  },
+  {
+    "name": {
+      "en": "Scrum Master Certified",
+      "es": "Scrum Master Certified"
+    },
+    "platform": "Scrum Alliance",
+    "url": "https://www.scrumalliance.org/",
+    "type": {
+      "en": "methodology",
+      "es": "metodología"
+    },
+    "icon": "./icon/scrum-cert.svg"
+  },
+  {
+    "name": {
+      "en": "React Developer Certification",
+      "es": "React Developer Certification"
+    },
+    "platform": "Meta",
+    "url": "https://www.coursera.org/professional-certificates/meta-react-native",
+    "type": {
+      "en": "frontend",
+      "es": "frontend"
+    },
+    "icon": "./icon/react-cert.svg"
+  }
+]

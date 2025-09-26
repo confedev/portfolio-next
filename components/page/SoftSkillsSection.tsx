@@ -15,7 +15,7 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { Filter, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
-import { Content } from '@/config/text.type';
+import { Content } from '@/config/types';
 import { config } from '@/config/config';
 import Link from 'next/link';
 

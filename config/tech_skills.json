@@ -1,0 +1,82 @@
+[
+  {
+    "tech": "TypeScript",
+    "icon": "./icon/typescript.png",
+    "url": "https://www.typescriptlang.org/",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "React",
+    "icon": "./icon/react.png",
+    "url": "https://reactjs.org/",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "Next.js",
+    "icon": "./icon/nextjs.png",
+    "url": "https://nextjs.org/",
+    "score": 4,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "Node.js",
+    "icon": "./icon/nodejs.png",
+    "url": "https://nodejs.org/",
+    "score": 4,
+    "type": {
+      "en": "runtime",
+      "es": "runtime"
+    }
+  },
+  {
+    "tech": "JavaScript",
+    "icon": "./icon/javascript.png",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Python",
+    "icon": "./icon/python.png",
+    "url": "https://www.python.org/",
+    "score": 4,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Docker",
+    "icon": "./icon/docker.png",
+    "url": "https://www.docker.com/",
+    "score": 4,
+    "type": {
+      "en": "devops",
+      "es": "devops"
+    }
+  },
+  {
+    "tech": "PostgreSQL",
+    "icon": "./icon/postgresql.png",
+    "url": "https://www.postgresql.org/",
+    "score": 4,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  }
+]
