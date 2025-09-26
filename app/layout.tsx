@@ -3,12 +3,14 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { content as contentEs } from '@/config/es/texts';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// Default metadata in Spanish, but can be changed dynamically
 export const metadata: Metadata = {
-  title: 'Portafolio Profesional - Desarrollador Full Stack',
-  description: 'Portafolio profesional de desarrollador con estética hacker',
+  title: contentEs.metadata.title,
+  description: contentEs.metadata.description,
   generator: 'v0.dev',
 };
 
@@ -22,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

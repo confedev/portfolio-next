@@ -38,6 +38,9 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
+import { Content } from '@/config/text.type';
+import { content as contentEs } from '@/config/es/texts';
+import { content as contentEn } from '@/config/en/texts';
 
 interface TechSkill {
   tech: string;
@@ -71,141 +74,9 @@ interface Certification {
   icon: string;
 }
 
-interface Content {
-  nav: {
-    about: string;
-    techSkills: string;
-    softSkills: string;
-    certifications: string;
-    projects: string;
-    contact: string;
-  };
-  hero: {
-    title: string;
-    subtitle: string;
-    description: string;
-  };
-  about: {
-    title: string;
-    content: string;
-  };
-  techSkills: {
-    title: string;
-    all: string;
-  };
-  softSkills: {
-    title: string;
-    all: string;
-  };
-  certifications: {
-    title: string;
-    all: string;
-  };
-  projects: {
-    title: string;
-  };
-  contact: {
-    title: string;
-    email: string;
-    phone: string;
-    location: string;
-  };
-  filters: {
-    all: string;
-  };
-}
-
 const content: Record<string, Content> = {
-  es: {
-    nav: {
-      about: 'Sobre mí',
-      techSkills: 'Habilidades Técnicas',
-      softSkills: 'Habilidades Blandas',
-      certifications: 'Certificaciones',
-      projects: 'Proyectos',
-      contact: 'Contacto',
-    },
-    hero: {
-      title: 'Desarrollador Full Stack',
-      subtitle: 'Construyendo el futuro con código',
-      description:
-        'Especializado en crear soluciones tecnológicas innovadoras con más de 5 años de experiencia en desarrollo web y móvil.',
-    },
-    about: {
-      title: 'Sobre mí',
-      content:
-        'Soy un desarrollador apasionado por la tecnología y la innovación. Me especializo en crear aplicaciones web y móviles robustas y escalables. Mi enfoque se centra en escribir código limpio, mantenible y eficiente.',
-    },
-    techSkills: {
-      title: 'Habilidades Técnicas',
-      all: 'Todas',
-    },
-    softSkills: {
-      title: 'Habilidades Blandas',
-      all: 'Todas',
-    },
-    certifications: {
-      title: 'Certificaciones',
-      all: 'Todas',
-    },
-    projects: {
-      title: 'Proyectos',
-    },
-    contact: {
-      title: 'Contacto',
-      email: 'correo@ejemplo.com',
-      phone: '+1 234 567 890',
-      location: 'Ciudad, País',
-    },
-    filters: {
-      all: 'Todas',
-    },
-  },
-  en: {
-    nav: {
-      about: 'About',
-      techSkills: 'Tech Skills',
-      softSkills: 'Soft Skills',
-      certifications: 'Certifications',
-      projects: 'Projects',
-      contact: 'Contact',
-    },
-    hero: {
-      title: 'Full Stack Developer',
-      subtitle: 'Building the future with code',
-      description:
-        'Specialized in creating innovative technological solutions with over 5 years of experience in web and mobile development.',
-    },
-    about: {
-      title: 'About Me',
-      content:
-        "I'm a developer passionate about technology and innovation. I specialize in creating robust and scalable web and mobile applications. My focus is on writing clean, maintainable, and efficient code.",
-    },
-    techSkills: {
-      title: 'Technical Skills',
-      all: 'All',
-    },
-    softSkills: {
-      title: 'Soft Skills',
-      all: 'All',
-    },
-    certifications: {
-      title: 'Certifications',
-      all: 'All',
-    },
-    projects: {
-      title: 'Projects',
-    },
-    contact: {
-      title: 'Contact',
-      email: 'email@example.com',
-      phone: '+1 234 567 890',
-      location: 'City, Country',
-    },
-    filters: {
-      all: 'All',
-    },
-  },
+  es: contentEs,
+  en: contentEn,
 };
 
 /* === JSON datasets – Spanish === */
@@ -236,9 +107,39 @@ export default function Portfolio() {
 
   const t = content[language];
 
+  // Detect system preferences and load saved configuration
   useEffect(() => {
     setIsMounted(true);
+
+    // Detect system language or load from localStorage
+    const savedLanguage = localStorage.getItem('portfolio-language') as
+      | 'es'
+      | 'en'
+      | null;
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    } else {
+      // Detect browser language
+      const browserLanguage = navigator.language.toLowerCase();
+      const detectedLanguage = browserLanguage.startsWith('es') ? 'es' : 'en';
+      setLanguage(detectedLanguage);
+    }
+
+    // Theme is already handled automatically by next-themes with localStorage
   }, []);
+
+  // Save language to localStorage when changed
+  const handleLanguageChange = (newLanguage: 'es' | 'en') => {
+    setLanguage(newLanguage);
+    localStorage.setItem('portfolio-language', newLanguage);
+  };
+
+  // Handle theme change and save it
+  const handleThemeChange = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    // next-themes already handles localStorage automatically
+  };
 
   useEffect(() => {
     const datasets = {
@@ -256,7 +157,7 @@ export default function Portfolio() {
       },
     } as const;
 
-    // populate state directly from in-memory JSON
+    // Populate state directly from in-memory JSON
     setTechSkills(datasets[language].tech);
     setSoftSkills(datasets[language].soft);
     setProjects(datasets[language].projects);
@@ -340,7 +241,9 @@ export default function Portfolio() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
+              onClick={() =>
+                handleLanguageChange(language === 'es' ? 'en' : 'es')
+              }
               className="hover:bg-green-500/10 font-mono flex items-center gap-1"
             >
               <Globe className="h-3 w-3" />
@@ -349,7 +252,7 @@ export default function Portfolio() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={handleThemeChange}
               className="hover:bg-green-500/10"
             >
               {isMounted &&
@@ -677,7 +580,7 @@ export default function Portfolio() {
             <Card className="border-green-500/20 bg-card/50">
               <CardContent className="p-6 text-center">
                 <Phone className="h-8 w-8 mx-auto mb-4 text-green-400" />
-                <h3 className="font-semibold mb-2">Teléfono</h3>
+                <h3 className="font-semibold mb-2">{t.contact.phoneLabel}</h3>
                 <p className="text-muted-foreground">{t.contact.phone}</p>
               </CardContent>
             </Card>
@@ -685,7 +588,9 @@ export default function Portfolio() {
             <Card className="border-green-500/20 bg-card/50">
               <CardContent className="p-6 text-center">
                 <MapPin className="h-8 w-8 mx-auto mb-4 text-green-400" />
-                <h3 className="font-semibold mb-2">Ubicación</h3>
+                <h3 className="font-semibold mb-2">
+                  {t.contact.locationLabel}
+                </h3>
                 <p className="text-muted-foreground">{t.contact.location}</p>
               </CardContent>
             </Card>
@@ -713,9 +618,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="border-t border-green-500/20 py-8 px-4">
         <div className="container mx-auto text-center">
-          <p className="text-muted-foreground">
-            © 2024 - Hecho con ❤️ y mucho ☕
-          </p>
+          <p className="text-muted-foreground">{t.footer.copyright}</p>
         </div>
       </footer>
     </div>
