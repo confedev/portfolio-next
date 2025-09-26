@@ -1,6 +1,9 @@
 import { Content } from './types';
 
-export const content = {
+export const content: {
+  en: Content;
+  es: Content;
+} = {
   en: {
     metadata: {
       title: 'Professional Portfolio - Full Stack Developer',
@@ -59,7 +62,7 @@ export const content = {
     footer: {
       copyright: '© 2024 - Made with ❤️ and lots of ☕',
     },
-  } as Content,
+  },
   es: {
     metadata: {
       title: 'Portafolio Profesional - Desarrollador Full Stack',
@@ -119,5 +122,5 @@ export const content = {
     footer: {
       copyright: '© 2024 - Hecho con ❤️ y mucho ☕',
     },
-  } as Content,
+  },
 };

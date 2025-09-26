@@ -3,8 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/navigation';
-import { TechSkill, SoftSkill, Project, Certification } from '@/config/types';
-import { content } from '@/config/content';
+import {
+  TechSkill,
+  SoftSkill,
+  Project,
+  Certification,
+} from '@/config/texts/types';
+import { content } from '@/config/texts/content';
 import {
   Header,
   HeroSection,
@@ -18,10 +23,10 @@ import {
 } from '@/components/page';
 
 /* === Bilingual JSON datasets === */
-import techSkillsData from '../config/tech_skills.json';
-import softSkillsData from '../config/soft_skills.json';
-import projectsData from '../config/projects.json';
-import certificationsData from '../config/certifications.json';
+import techSkillsData from '../config/sections/tech_skills.json';
+import softSkillsData from '../config/sections/soft_skills.json';
+import projectsData from '../config/sections/projects.json';
+import certificationsData from '../config/sections/certifications.json';
 
 // Transformed types for component consumption
 interface TransformedTechSkill {

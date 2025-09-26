@@ -1,4 +1,4 @@
-import { Content } from '@/config/types';
+import { Content } from '@/config/texts/types';
 
 interface FooterProps {
   t: Content;

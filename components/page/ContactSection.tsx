@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
-import { Content } from '@/config/types';
+import { Content } from '@/config/texts/types';
 
 interface ContactSectionProps {
   t: Content;

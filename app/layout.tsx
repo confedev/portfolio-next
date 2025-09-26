@@ -4,8 +4,7 @@ import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { content as contentEs } from '@/config/es/texts';
-import { content as contentEn } from '@/config/en/texts';
+import { content } from '@/config/texts/content';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,11 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
   // Default to Spanish if no language preference is found
   const language = savedLanguage || 'es';
-  const content = language === 'en' ? contentEn : contentEs;
+  const currentContent = content[language];
 
   return {
-    title: content.metadata.title,
-    description: content.metadata.description,
+    title: currentContent.metadata.title,
+    description: currentContent.metadata.description,
     generator: 'v0.dev',
     alternates: {
       languages: {

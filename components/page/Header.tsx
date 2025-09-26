@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { AnimatedLogo } from '@/components/ui/animated-logo';
 import { Moon, Sun, Globe } from 'lucide-react';
-import { Content } from '@/config/types';
+import { Content } from '@/config/texts/types';
 
 interface HeaderProps {
   t: Content;

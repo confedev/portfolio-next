@@ -1,4 +1,4 @@
-import { Content } from '@/config/types';
+import { Content } from '@/config/texts/types';
 import { useTypewriter } from '@/hooks/use-typewriter';
 
 interface HeroSectionProps {
