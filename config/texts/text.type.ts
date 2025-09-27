@@ -49,6 +49,6 @@ export interface Content {
     all: string;
   };
   footer: {
-    copyright: string;
+    description: string;
   };
 }

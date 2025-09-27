@@ -60,7 +60,7 @@ export const content: {
       all: 'All',
     },
     footer: {
-      copyright: '© 2024 - Made with ❤️ and lots of ☕',
+      description: 'Made with ❤️ and lots of ☕',
     },
   },
   es: {
@@ -120,7 +120,7 @@ export const content: {
       all: 'Todas',
     },
     footer: {
-      copyright: '© 2024 - Hecho con ❤️ y mucho ☕',
+      description: 'Hecho con ❤️ y mucho ☕',
     },
   },
 };
