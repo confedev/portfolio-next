@@ -21,6 +21,7 @@ import {
   ContactSection,
   Footer,
 } from '@/components/page';
+import { FloatingNav } from '@/components/ui/floating-nav';
 
 /* === Bilingual JSON datasets === */
 import techSkillsData from '../config/sections/tech_skills.json';
@@ -213,7 +214,7 @@ export default function Portfolio() {
     ) {
       setCertificationsFilter('all');
     }
-  }, [language, techFilter, softSkillsFilter, certificationsFilter]);
+  }, [language]);
 
   const filteredTechSkills =
     techFilter === 'all'
@@ -289,6 +290,8 @@ export default function Portfolio() {
       <ContactSection t={t} />
 
       <Footer t={t} />
+
+      {/* Floating Navigation for Mobile <FloatingNav t={t} /> */}
     </div>
   );
 }
