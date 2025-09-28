@@ -177,13 +177,43 @@ export default function Portfolio() {
       }));
 
     // Populate state with transformed data
-    setTechSkills(transformTechSkills(techSkillsData as TechSkill[]));
-    setSoftSkills(transformSoftSkills(softSkillsData as SoftSkill[]));
-    setProjects(transformProjects(projectsData as Project[]));
-    setCertifications(
-      transformCertifications(certificationsData as Certification[]),
+    const newTechSkills = transformTechSkills(techSkillsData as TechSkill[]);
+    const newSoftSkills = transformSoftSkills(softSkillsData as SoftSkill[]);
+    const newCertifications = transformCertifications(
+      certificationsData as Certification[],
     );
-  }, [language]);
+
+    setTechSkills(newTechSkills);
+    setSoftSkills(newSoftSkills);
+    setProjects(transformProjects(projectsData as Project[]));
+    setCertifications(newCertifications);
+
+    // Reset filters to 'all' if current filter doesn't exist in new language
+    const newTechTypes = [...new Set(newTechSkills.map((skill) => skill.type))];
+    const newSoftSkillTypes = [
+      ...new Set(newSoftSkills.map((skill) => skill.type)),
+    ];
+    const newCertificationTypes = [
+      ...new Set(newCertifications.map((cert) => cert.type)),
+    ];
+
+    // Reset filters if they don't exist in the new language
+    if (techFilter !== 'all' && !newTechTypes.includes(techFilter)) {
+      setTechFilter('all');
+    }
+    if (
+      softSkillsFilter !== 'all' &&
+      !newSoftSkillTypes.includes(softSkillsFilter)
+    ) {
+      setSoftSkillsFilter('all');
+    }
+    if (
+      certificationsFilter !== 'all' &&
+      !newCertificationTypes.includes(certificationsFilter)
+    ) {
+      setCertificationsFilter('all');
+    }
+  }, [language, techFilter, softSkillsFilter, certificationsFilter]);
 
   const filteredTechSkills =
     techFilter === 'all'
