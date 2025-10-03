@@ -93,4 +93,22 @@ export interface Content {
   footer: {
     description: string;
   };
+  contactModal: {
+    title: string;
+    description: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    send: string;
+    cancel: string;
+    sending: string;
+    success: string;
+    successMessage: string;
+    error: string;
+    errorMessage: string;
+    required: string;
+    invalidEmail: string;
+    tryAgain: string;
+    autoCloseMessage: string;
+  };
 }

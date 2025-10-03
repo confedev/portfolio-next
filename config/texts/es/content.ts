@@ -58,4 +58,24 @@ export const CONTENT_ES: Content = {
   footer: {
     description: 'Hecho con ❤️ y mucho ☕',
   },
+  contactModal: {
+    title: 'Enviar Mensaje',
+    description:
+      'Completa el formulario y me pondré en contacto contigo pronto.',
+    firstName: 'Nombre',
+    lastName: 'Apellido',
+    email: 'Correo Electrónico',
+    send: 'Enviar Mensaje',
+    cancel: 'Cancelar',
+    sending: 'Enviando...',
+    success: '¡Mensaje Enviado!',
+    successMessage:
+      'Tu mensaje ha sido enviado correctamente. Te responderé pronto.',
+    error: 'Error al Enviar',
+    errorMessage: 'Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.',
+    required: 'Este campo es obligatorio',
+    invalidEmail: 'Ingresa un correo electrónico válido',
+    tryAgain: 'Intentar de nuevo',
+    autoCloseMessage: 'Este modal se cerrará automáticamente...',
+  },
 };

@@ -58,4 +58,23 @@ export const CONTENT_EN: Content = {
   footer: {
     description: 'Made with ❤️ and lots of ☕',
   },
+  contactModal: {
+    title: 'Send Message',
+    description: "Fill out the form and I'll get back to you soon.",
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    email: 'Email Address',
+    send: 'Send Message',
+    cancel: 'Cancel',
+    sending: 'Sending...',
+    success: 'Message Sent!',
+    successMessage:
+      "Your message has been sent successfully. I'll get back to you soon.",
+    error: 'Send Error',
+    errorMessage: 'There was a problem sending your message. Please try again.',
+    required: 'This field is required',
+    invalidEmail: 'Please enter a valid email address',
+    tryAgain: 'Try Again',
+    autoCloseMessage: 'This modal will close automatically...',
+  },
 };

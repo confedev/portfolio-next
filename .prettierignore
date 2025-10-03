@@ -9,6 +9,7 @@
 .env
 .env.*
 .gitkeep
+.gitignore
 
 #custom
 .nyc_output
