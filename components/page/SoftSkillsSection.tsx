@@ -18,6 +18,7 @@ import { Filter, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { Content } from '@/config/texts/types';
 import { config } from '@/config/config';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface SoftSkill {
   name: string;
@@ -36,6 +37,43 @@ interface SoftSkillsSectionProps {
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
 }
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    x: -30,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 400,
+      damping: 25,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: 30,
+    scale: 0.95,
+    transition: {
+      duration: 0.25,
+    },
+  },
+};
 
 export function SoftSkillsSection({
   t,
@@ -90,35 +128,47 @@ export function SoftSkillsSection({
                 maxHeight: `${config.maxRowsInCollapsibleContent.softSkills * config.rowHeight.softSkills}px`,
               }}
             >
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {filteredSoftSkills.map((skill, index) => (
-                  <Card
-                    key={`${skill.name}-${index}`}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
-                  >
-                    <CardContent className="p-4">
-                      <Link
-                        href={skill.url}
-                        target="_blank"
-                        className="flex items-center gap-3 group"
-                      >
-                        <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
-                          <div className="text-sm">💡</div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold group-hover:text-green-400 transition-colors">
-                            {skill.name}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {skill.platform}
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <motion.div
+                className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                key={softSkillsFilter}
+              >
+                <AnimatePresence mode="wait">
+                  {filteredSoftSkills.map((skill, index) => (
+                    <motion.div
+                      key={`${skill.name}-${skill.url}-${softSkillsFilter}-${index}`}
+                      variants={itemVariants}
+                      layout
+                      layoutId={`${skill.name}-${skill.url}`}
+                    >
+                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                        <CardContent className="p-4">
+                          <Link
+                            href={skill.url}
+                            target="_blank"
+                            className="flex items-center gap-3 group"
+                          >
+                            <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
+                              <div className="text-sm">💡</div>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="font-semibold group-hover:text-green-400 transition-colors">
+                                {skill.name}
+                              </h3>
+                              <p className="text-sm text-muted-foreground">
+                                {skill.platform}
+                              </p>
+                            </div>
+                            <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
             </div>
           </CollapsibleContent>
         </Collapsible>

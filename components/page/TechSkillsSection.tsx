@@ -19,6 +19,7 @@ import { Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { Content } from '@/config/texts/types';
 import { config } from '@/config/config';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface TechSkill {
   tech: string;
@@ -37,6 +38,43 @@ interface TechSkillsSectionProps {
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
 }
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.8,
+    y: -20,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
 
 export function TechSkillsSection({
   t,
@@ -102,38 +140,50 @@ export function TechSkillsSection({
                 maxHeight: `${config.maxRowsInCollapsibleContent.techSkills * config.rowHeight.techSkills}px`,
               }}
             >
-              <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-                {filteredTechSkills.map((skill, index) => (
-                  <Card
-                    key={`${skill.tech}-${index}`}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
-                  >
-                    <CardContent className="p-3 flex flex-col items-center text-center">
-                      <Link
-                        href={skill.url}
-                        target="_blank"
-                        className="group w-full"
-                      >
-                        <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
-                          <div className="text-lg">⚡</div>
-                        </div>
-                        <h3 className="font-medium text-xs mb-1 text-green-400 group-hover:text-green-300 transition-colors leading-tight">
-                          {skill.tech}
-                        </h3>
-                        <div className="flex justify-center mb-1 scale-75">
-                          {renderStars(skill.score)}
-                        </div>
-                        <Badge
-                          variant="outline"
-                          className="border-green-500/50 text-green-400 text-xs px-1 py-0"
-                        >
-                          {skill.type}
-                        </Badge>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              <motion.div
+                className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                key={techFilter}
+              >
+                <AnimatePresence mode="wait">
+                  {filteredTechSkills.map((skill, index) => (
+                    <motion.div
+                      key={`${skill.tech}-${skill.url}-${techFilter}-${index}`}
+                      variants={itemVariants}
+                      layout
+                      layoutId={`${skill.tech}-${skill.url}`}
+                    >
+                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                        <CardContent className="p-3 flex flex-col items-center text-center">
+                          <Link
+                            href={skill.url}
+                            target="_blank"
+                            className="group w-full"
+                          >
+                            <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
+                              <div className="text-lg">⚡</div>
+                            </div>
+                            <h3 className="font-medium text-xs mb-1 text-green-400 group-hover:text-green-300 transition-colors leading-tight">
+                              {skill.tech}
+                            </h3>
+                            <div className="flex justify-center mb-1 scale-75">
+                              {renderStars(skill.score)}
+                            </div>
+                            <Badge
+                              variant="outline"
+                              className="border-green-500/50 text-green-400 text-xs px-1 py-0"
+                            >
+                              {skill.type}
+                            </Badge>
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
             </div>
           </CollapsibleContent>
         </Collapsible>

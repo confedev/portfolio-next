@@ -18,6 +18,7 @@ import {
 import { Filter, ChevronDown, ChevronUp } from 'lucide-react';
 import { Content } from '@/config/texts/types';
 import { config } from '@/config/config';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 interface Certification {
@@ -37,6 +38,43 @@ interface CertificationsSectionProps {
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
 }
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 350,
+      damping: 22,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -30,
+    scale: 0.9,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 
 export function CertificationsSection({
   t,
@@ -94,36 +132,52 @@ export function CertificationsSection({
                 maxHeight: `${config.maxRowsInCollapsibleContent.certifications * config.rowHeight.certifications}px`,
               }}
             >
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {filteredCertifications.map((cert, index) => (
-                  <Card
-                    key={`${cert.name}-${index}`}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors"
-                  >
-                    <CardContent className="p-6">
-                      <Link href={cert.url} target="_blank" className="group">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
-                            <div className="text-lg">🏆</div>
-                          </div>
-                          <Badge
-                            variant="outline"
-                            className="border-green-500/50 text-green-400"
+              <motion.div
+                className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                key={certificationsFilter}
+              >
+                <AnimatePresence mode="wait">
+                  {filteredCertifications.map((cert, index) => (
+                    <motion.div
+                      key={`${cert.name}-${cert.url}-${certificationsFilter}-${index}`}
+                      variants={itemVariants}
+                      layout
+                      layoutId={`${cert.name}-${cert.url}`}
+                    >
+                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                        <CardContent className="p-6">
+                          <Link
+                            href={cert.url}
+                            target="_blank"
+                            className="group"
                           >
-                            {cert.type}
-                          </Badge>
-                        </div>
-                        <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
-                          {cert.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {cert.platform}
-                        </p>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                            <div className="flex items-center gap-3 mb-3">
+                              <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
+                                <div className="text-lg">🏆</div>
+                              </div>
+                              <Badge
+                                variant="outline"
+                                className="border-green-500/50 text-green-400"
+                              >
+                                {cert.type}
+                              </Badge>
+                            </div>
+                            <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
+                              {cert.name}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {cert.platform}
+                            </p>
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
             </div>
           </CollapsibleContent>
         </Collapsible>
