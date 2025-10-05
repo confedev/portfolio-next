@@ -99,6 +99,9 @@ export interface Content {
     firstName: string;
     lastName: string;
     email: string;
+    company: string;
+    phone: string;
+    optional: string;
     send: string;
     cancel: string;
     sending: string;

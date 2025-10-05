@@ -40,6 +40,8 @@ const createFormSchema = (t: Content) =>
       .string()
       .min(1, t.contactModal.required)
       .email(t.contactModal.invalidEmail),
+    company: z.string().min(1, t.contactModal.required),
+    phone: z.string().optional(),
   });
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
@@ -61,6 +63,8 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
       firstName: '',
       lastName: '',
       email: '',
+      company: '',
+      phone: '',
     },
   });
 
@@ -222,6 +226,48 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
                       <Input
                         {...field}
                         type="email"
+                        className="border-green-500/20 focus:border-green-400 bg-background/50"
+                        disabled={formState === 'sending'}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="company"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-green-400">
+                      {t.contactModal.company}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        className="border-green-500/20 focus:border-green-400 bg-background/50"
+                        disabled={formState === 'sending'}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-green-400">
+                      {t.contactModal.phone} {t.contactModal.optional}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        type="tel"
+                        placeholder="+1 234 567 8900"
                         className="border-green-500/20 focus:border-green-400 bg-background/50"
                         disabled={formState === 'sending'}
                       />
