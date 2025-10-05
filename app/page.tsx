@@ -291,7 +291,8 @@ export default function Portfolio() {
 
       <Footer t={t} />
 
-      {/* Floating Navigation for Mobile <FloatingNav t={t} /> */}
+      {/* Floating Navigation for Mobile */}
+      <FloatingNav t={t} />
     </div>
   );
 }
