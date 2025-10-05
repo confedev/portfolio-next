@@ -21,7 +21,7 @@ export function ContactSection({ t }: ContactSectionProps) {
           {t.contact.title}
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3 mb-8">
+        <div className="hidden gap-6 md:grid-cols-3 mb-8">
           <Card className="border-green-500/20 bg-card/50">
             <CardContent className="p-6 text-center">
               <Mail className="h-8 w-8 mx-auto mb-4 text-green-400" />
