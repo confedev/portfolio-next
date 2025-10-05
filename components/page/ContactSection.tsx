@@ -47,7 +47,7 @@ export function ContactSection({ t }: ContactSectionProps) {
           </Card>
         </div>
 
-        {/* Botón principal para abrir el modal de contacto */}
+        {/* Main button to open the contact modal */}
         <div className="flex justify-center mb-8">
           <Button
             onClick={() => setModalOpen(true)}

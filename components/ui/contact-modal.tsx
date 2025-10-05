@@ -64,12 +64,12 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
     },
   });
 
-  // Manejar el estado de Formspree automáticamente
+  // Handle Formspree state automatically
   useEffect(() => {
     if (formspreeState.succeeded) {
       setFormState('success');
       form.reset();
-      // Auto-cerrar después de 3 segundos
+      // Auto-close after 3 seconds
       const successTimer = setTimeout(() => {
         setFormState('idle');
         onOpenChange(false);
@@ -77,7 +77,7 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
       return () => clearTimeout(successTimer);
     } else if (formspreeState.errors && formspreeState.errors.length > 0) {
       setFormState('error');
-      // Volver al estado inicial después de 3 segundos
+      // Return to initial state after 3 seconds
       const errorTimer = setTimeout(() => setFormState('idle'), 3000);
       return () => clearTimeout(errorTimer);
     } else if (formspreeState.submitting) {
@@ -89,7 +89,7 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
     formspreeState.errors,
   ]);
 
-  // Resetear el estado cuando el modal se cierre
+  // Reset state when modal closes
   useEffect(() => {
     if (!open) {
       setFormState('idle');
@@ -97,7 +97,7 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
   }, [open]);
 
   const onSubmit = async (data: FormData) => {
-    // El estado se maneja automáticamente con useEffect
+    // State is handled automatically with useEffect
     await submitToFormspree(data);
   };
 
