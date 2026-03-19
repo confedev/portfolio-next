@@ -1,8 +1,58 @@
 [
   {
-    "tech": "TypeScript",
-    "icon": "./icon/typescript.png",
-    "url": "https://www.typescriptlang.org/",
+    "tech": "Angular",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "Bootstrap",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "Nestjs",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "Spring Boot",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "TypeORM",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "HTML",
+    "icon": "",
+    "url": "",
     "score": 5,
     "type": {
       "en": "language",
@@ -10,9 +60,109 @@
     }
   },
   {
-    "tech": "React",
-    "icon": "./icon/react.png",
-    "url": "https://reactjs.org/",
+    "tech": "Java",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "JavaScript",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "JSON",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "data format",
+      "es": "formato de datos"
+    }
+  },
+  {
+    "tech": "TypeScript",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "XML",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "data format",
+      "es": "formato de datos"
+    }
+  },
+  {
+    "tech": "YAML",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "data format",
+      "es": "formato de datos"
+    }
+  },
+  {
+    "tech": "JWT",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "standard",
+      "es": "estándar"
+    }
+  },
+  {
+    "tech": "REST",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "architecture",
+      "es": "arquitectura"
+    }
+  },
+  {
+    "tech": "Nodejs",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "runtime",
+      "es": "entorno de ejecución"
+    }
+  },
+  {
+    "tech": "Hibernate",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "JEE",
+    "icon": "",
+    "url": "",
     "score": 5,
     "type": {
       "en": "framework",
@@ -20,29 +170,709 @@
     }
   },
   {
-    "tech": "Next.js",
-    "icon": "./icon/nextjs.png",
-    "url": "https://nextjs.org/",
-    "score": 4,
+    "tech": "jQuery",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "JSP",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "technology",
+      "es": "tecnología"
+    }
+  },
+  {
+    "tech": "J2EE",
+    "icon": "",
+    "url": "",
+    "score": 5,
     "type": {
       "en": "framework",
       "es": "framework"
     }
   },
   {
-    "tech": "Node.js",
-    "icon": "./icon/nodejs.png",
-    "url": "https://nodejs.org/",
-    "score": 4,
+    "tech": "material design",
+    "icon": "",
+    "url": "",
+    "score": 5,
     "type": {
-      "en": "runtime",
-      "es": "runtime"
+      "en": "design system",
+      "es": "sistema de diseño"
     }
   },
   {
-    "tech": "JavaScript",
-    "icon": "./icon/javascript.png",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "tech": "CSS",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Github",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "platform",
+      "es": "plataforma"
+    }
+  },
+  {
+    "tech": "Gitlab",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "platform",
+      "es": "plataforma"
+    }
+  },
+  {
+    "tech": "Docker",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Eclipse",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "IDE",
+      "es": "IDE"
+    }
+  },
+  {
+    "tech": "Git",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Jenkins",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Maven",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Nginx",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "web server",
+      "es": "servidor web"
+    }
+  },
+  {
+    "tech": "NPM",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "PM2",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Postman",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Redis",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "MariaDB",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "Microsoft SQL",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "MySQL",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "PostgreSQL",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "Express",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "jest",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "jUnit",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "karma",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Quarkus",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "C#",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Groovy",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "AWS",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud provider",
+      "es": "proveedor nube"
+    }
+  },
+  {
+    "tech": "Bash",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Sonarqube",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Tomcat",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "web server",
+      "es": "servidor web"
+    }
+  },
+  {
+    "tech": "Ubuntu Server",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "OS",
+      "es": "sistema operativo"
+    }
+  },
+  {
+    "tech": "Wildfly",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "app server",
+      "es": "servidor de aplicaciones"
+    }
+  },
+  {
+    "tech": "0Auth",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "standard",
+      "es": "estándar"
+    }
+  },
+  {
+    "tech": "SOAP",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "protocol",
+      "es": "protocolo"
+    }
+  },
+  {
+    "tech": "Mocha",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "Jboss",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "app server",
+      "es": "servidor de aplicaciones"
+    }
+  },
+  {
+    "tech": "AWS ElasticCache",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS SQS",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS AIM",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS EC2",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "VTEX",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "platform",
+      "es": "plataforma"
+    }
+  },
+  {
+    "tech": "Semgrep",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "AWS Lambda",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS Cloud Watch",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "Wordpress",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "CMS",
+      "es": "CMS"
+    }
+  },
+  {
+    "tech": "Github Copilot",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "AI tool",
+      "es": "herramienta IA"
+    }
+  },
+  {
+    "tech": "Github Action",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Gitlab CI",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Kubernetes",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "New Relic",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "GraphQL",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "AWS Secrets Manager",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "SSE",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "protocol",
+      "es": "protocolo"
+    }
+  },
+  {
+    "tech": "AWS S3",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS SNS",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS CI/CD",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "Nx",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Coralogix",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "MongoDB",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": "Playwrigth",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "Windows Server",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "OS",
+      "es": "sistema operativo"
+    }
+  },
+  {
+    "tech": "MQTT",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "protocol",
+      "es": "protocolo"
+    }
+  },
+  {
+    "tech": "React",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "library",
+      "es": "librería"
+    }
+  },
+  {
+    "tech": "SoapUI",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Kong",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Oracle",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "database",
+      "es": "base de datos"
+    }
+  },
+  {
+    "tech": ".NET",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "framework",
+      "es": "framework"
+    }
+  },
+  {
+    "tech": "Selenium",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "PHP",
+    "icon": "",
+    "url": "",
     "score": 5,
     "type": {
       "en": "language",
@@ -51,32 +881,202 @@
   },
   {
     "tech": "Python",
-    "icon": "./icon/python.png",
-    "url": "https://www.python.org/",
-    "score": 4,
+    "icon": "",
+    "url": "",
+    "score": 5,
     "type": {
       "en": "language",
       "es": "lenguaje"
     }
   },
   {
-    "tech": "Docker",
-    "icon": "./icon/docker.png",
-    "url": "https://www.docker.com/",
-    "score": 4,
+    "tech": "Firebase",
+    "icon": "",
+    "url": "",
+    "score": 5,
     "type": {
-      "en": "devops",
-      "es": "devops"
+      "en": "platform",
+      "es": "plataforma"
     }
   },
   {
-    "tech": "PostgreSQL",
-    "icon": "./icon/postgresql.png",
-    "url": "https://www.postgresql.org/",
-    "score": 4,
+    "tech": "Elastic Search",
+    "icon": "",
+    "url": "",
+    "score": 5,
     "type": {
       "en": "database",
       "es": "base de datos"
+    }
+  },
+  {
+    "tech": "Gradle",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Kibana",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Logstach",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "NuGet",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "PowerShell",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Terraform",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Zabbix",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Helm",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "Sharepoint",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "platform",
+      "es": "plataforma"
+    }
+  },
+  {
+    "tech": "AWS Elastic BeanStalk",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS Personalize",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS EKS",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "Keeper",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "tool",
+      "es": "herramienta"
+    }
+  },
+  {
+    "tech": "AWS Cognito",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "AWS Kinesis Stream",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud service",
+      "es": "servicio nube"
+    }
+  },
+  {
+    "tech": "Go",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
+    }
+  },
+  {
+    "tech": "Kotlin",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "language",
+      "es": "lenguaje"
     }
   }
 ]
