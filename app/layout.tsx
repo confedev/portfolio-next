@@ -40,6 +40,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/site/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/site/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/site/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site/site.webmanifest" />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
