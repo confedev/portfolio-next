@@ -80,6 +80,7 @@ export default function Portfolio() {
   const [softSkillsFilter, setSoftSkillsFilter] = useState('all');
   const [certificationsFilter, setCertificationsFilter] = useState('all');
   const [isMounted, setIsMounted] = useState(false);
+  const [isLoadingData, setIsLoadingData] = useState(true);
 
   const t = content[language];
 
@@ -146,6 +147,7 @@ export default function Portfolio() {
   };
 
   useEffect(() => {
+    setIsLoadingData(true);
     // Transform bilingual data to current language format
     const transformTechSkills = (data: TechSkill[]): TransformedTechSkill[] =>
       data.map((skill) => ({
@@ -214,6 +216,11 @@ export default function Portfolio() {
     ) {
       setCertificationsFilter('all');
     }
+
+    // Small delay to ensure smooth transition
+    setTimeout(() => {
+      setIsLoadingData(false);
+    }, 150);
   }, [language]);
 
   const filteredTechSkills =
@@ -258,6 +265,7 @@ export default function Portfolio() {
         techTypes={techTypes}
         onOpenChange={setTechSkillsOpen}
         onFilterChange={setTechFilter}
+        isLoading={isLoadingData}
       />
 
       <SoftSkillsSection
@@ -268,6 +276,7 @@ export default function Portfolio() {
         softSkillTypes={softSkillTypes}
         onOpenChange={setSoftSkillsOpen}
         onFilterChange={setSoftSkillsFilter}
+        isLoading={isLoadingData}
       />
 
       <CertificationsSection
@@ -278,6 +287,7 @@ export default function Portfolio() {
         certificationTypes={certificationTypes}
         onOpenChange={setCertificationsOpen}
         onFilterChange={setCertificationsFilter}
+        isLoading={isLoadingData}
       />
 
       <ProjectsSection
@@ -285,6 +295,7 @@ export default function Portfolio() {
         projects={projects}
         projectsOpen={projectsOpen}
         onOpenChange={setProjectsOpen}
+        isLoading={isLoadingData}
       />
 
       <ContactSection t={t} />

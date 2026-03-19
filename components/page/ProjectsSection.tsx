@@ -32,6 +32,7 @@ interface ProjectsSectionProps {
   projects: Project[];
   projectsOpen: boolean;
   onOpenChange: (open: boolean) => void;
+  isLoading?: boolean;
 }
 
 export function ProjectsSection({
@@ -39,6 +40,7 @@ export function ProjectsSection({
   projects,
   projectsOpen,
   onOpenChange,
+  isLoading = false,
 }: ProjectsSectionProps) {
   return (
     <section id="projects" className="py-16 px-4">
@@ -61,49 +63,56 @@ export function ProjectsSection({
           </CollapsibleTrigger>
 
           <CollapsibleContent className="mt-4">
-            <div
-              className={config.scrollbar.className}
-              style={{
-                maxHeight: `${config.maxRowsInCollapsibleContent.projects * config.rowHeight.projects}px`,
-              }}
-            >
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project, index) => (
-                  <Card
-                    key={`${project.name}-${index}`}
-                    className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors overflow-hidden"
-                  >
-                    <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
-                      <div className="text-4xl">🚀</div>
-                    </div>
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-lg">
-                          {project.name}
-                        </CardTitle>
-                        <Badge
-                          variant="outline"
-                          className="border-green-500/50 text-green-400"
-                        >
-                          {project.sector}
-                        </Badge>
-                      </div>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <Link href={project.url} target="_blank">
-                        <Button
-                          variant="outline"
-                          className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent"
-                        >
-                          Ver Proyecto <ExternalLink className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <div className="w-8 h-8 rounded-full border-4 border-green-400 border-t-transparent animate-spin"></div>
               </div>
-            </div>
+            ) : (
+              <div
+                className={config.scrollbar.className}
+                style={{
+                  maxHeight: `${config.maxRowsInCollapsibleContent.projects * config.rowHeight.projects}px`,
+                }}
+              >
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {projects.map((project, index) => (
+                    <Card
+                      key={`${project.name}-${index}`}
+                      className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors overflow-hidden"
+                    >
+                      <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+                        <div className="text-4xl">🚀</div>
+                      </div>
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg">
+                            {project.name}
+                          </CardTitle>
+                          <Badge
+                            variant="outline"
+                            className="border-green-500/50 text-green-400"
+                          >
+                            {project.sector}
+                          </Badge>
+                        </div>
+                        <CardDescription>{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <Link href={project.url} target="_blank">
+                          <Button
+                            variant="outline"
+                            className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent"
+                          >
+                            Ver Proyecto{' '}
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
           </CollapsibleContent>
         </Collapsible>
       </div>

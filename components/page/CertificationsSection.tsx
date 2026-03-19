@@ -37,6 +37,7 @@ interface CertificationsSectionProps {
   certificationTypes: string[];
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
+  isLoading?: boolean;
 }
 
 const containerVariants = {
@@ -84,6 +85,7 @@ export function CertificationsSection({
   certificationTypes,
   onOpenChange,
   onFilterChange,
+  isLoading = false,
 }: CertificationsSectionProps) {
   return (
     <section id="certifications" className="py-16 px-4 bg-muted/20">
@@ -106,79 +108,89 @@ export function CertificationsSection({
           </CollapsibleTrigger>
 
           <CollapsibleContent className="mt-4">
-            <div className="mb-6 flex items-center gap-4">
-              <Filter className="h-5 w-5 text-green-400" />
-              <Select
-                value={certificationsFilter}
-                onValueChange={onFilterChange}
-              >
-                <SelectTrigger className="w-48 border-green-500/20">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">{t.certifications.all}</SelectItem>
-                  {certificationTypes.map((type) => (
-                    <SelectItem key={type} value={type}>
-                      {type}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <div className="w-8 h-8 rounded-full border-4 border-green-400 border-t-transparent animate-spin"></div>
+              </div>
+            ) : (
+              <>
+                <div className="mb-6 flex items-center gap-4">
+                  <Filter className="h-5 w-5 text-green-400" />
+                  <Select
+                    value={certificationsFilter}
+                    onValueChange={onFilterChange}
+                  >
+                    <SelectTrigger className="w-48 border-green-500/20">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">
+                        {t.certifications.all}
+                      </SelectItem>
+                      {certificationTypes.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
 
-            <div
-              className={config.scrollbar.className}
-              style={{
-                maxHeight: `${config.maxRowsInCollapsibleContent.certifications * config.rowHeight.certifications}px`,
-              }}
-            >
-              <motion.div
-                className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                key={certificationsFilter}
-              >
-                <AnimatePresence mode="wait">
-                  {filteredCertifications.map((cert, index) => (
-                    <motion.div
-                      key={`${cert.name}-${cert.url}-${certificationsFilter}-${index}`}
-                      variants={itemVariants}
-                      layout
-                      layoutId={`${cert.name}-${cert.url}`}
-                    >
-                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
-                        <CardContent className="p-6">
-                          <Link
-                            href={cert.url}
-                            target="_blank"
-                            className="group"
-                          >
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
-                                <div className="text-lg">🏆</div>
-                              </div>
-                              <Badge
-                                variant="outline"
-                                className="border-green-500/50 text-green-400"
+                <div
+                  className={config.scrollbar.className}
+                  style={{
+                    maxHeight: `${config.maxRowsInCollapsibleContent.certifications * config.rowHeight.certifications}px`,
+                  }}
+                >
+                  <motion.div
+                    className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    key={certificationsFilter}
+                  >
+                    <AnimatePresence mode="wait">
+                      {filteredCertifications.map((cert, index) => (
+                        <motion.div
+                          key={`${cert.name}-${cert.url}-${certificationsFilter}-${index}`}
+                          variants={itemVariants}
+                          layout
+                          layoutId={`${cert.name}-${cert.url}`}
+                        >
+                          <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                            <CardContent className="p-6">
+                              <Link
+                                href={cert.url}
+                                target="_blank"
+                                className="group"
                               >
-                                {cert.type}
-                              </Badge>
-                            </div>
-                            <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
-                              {cert.name}
-                            </h3>
-                            <p className="text-sm text-muted-foreground">
-                              {cert.platform}
-                            </p>
-                          </Link>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </motion.div>
-            </div>
+                                <div className="flex items-center gap-3 mb-3">
+                                  <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
+                                    <div className="text-lg">🏆</div>
+                                  </div>
+                                  <Badge
+                                    variant="outline"
+                                    className="border-green-500/50 text-green-400"
+                                  >
+                                    {cert.type}
+                                  </Badge>
+                                </div>
+                                <h3 className="font-semibold mb-2 group-hover:text-green-400 transition-colors">
+                                  {cert.name}
+                                </h3>
+                                <p className="text-sm text-muted-foreground">
+                                  {cert.platform}
+                                </p>
+                              </Link>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                  </motion.div>
+                </div>
+              </>
+            )}
           </CollapsibleContent>
         </Collapsible>
       </div>

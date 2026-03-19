@@ -37,6 +37,7 @@ interface TechSkillsSectionProps {
   techTypes: string[];
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
+  isLoading?: boolean;
 }
 
 const containerVariants = {
@@ -84,6 +85,7 @@ export function TechSkillsSection({
   techTypes,
   onOpenChange,
   onFilterChange,
+  isLoading = false,
 }: TechSkillsSectionProps) {
   const renderStars = (score: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -117,74 +119,82 @@ export function TechSkillsSection({
           </CollapsibleTrigger>
 
           <CollapsibleContent className="mt-4">
-            <div className="mb-6 flex items-center gap-4">
-              <Filter className="h-5 w-5 text-green-400" />
-              <Select value={techFilter} onValueChange={onFilterChange}>
-                <SelectTrigger className="w-48 border-green-500/20">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">{t.techSkills.all}</SelectItem>
-                  {techTypes.map((type) => (
-                    <SelectItem key={type} value={type}>
-                      {type}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <div className="w-8 h-8 rounded-full border-4 border-green-400 border-t-transparent animate-spin"></div>
+              </div>
+            ) : (
+              <>
+                <div className="mb-6 flex items-center gap-4">
+                  <Filter className="h-5 w-5 text-green-400" />
+                  <Select value={techFilter} onValueChange={onFilterChange}>
+                    <SelectTrigger className="w-48 border-green-500/20">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">{t.techSkills.all}</SelectItem>
+                      {techTypes.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
 
-            <div
-              className={config.scrollbar.className}
-              style={{
-                maxHeight: `${config.maxRowsInCollapsibleContent.techSkills * config.rowHeight.techSkills}px`,
-              }}
-            >
-              <motion.div
-                className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                key={techFilter}
-              >
-                <AnimatePresence mode="wait">
-                  {filteredTechSkills.map((skill, index) => (
-                    <motion.div
-                      key={`${skill.tech}-${skill.url}-${techFilter}-${index}`}
-                      variants={itemVariants}
-                      layout
-                      layoutId={`${skill.tech}-${skill.url}`}
-                    >
-                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
-                        <CardContent className="p-3 flex flex-col items-center text-center">
-                          <Link
-                            href={skill.url}
-                            target="_blank"
-                            className="group w-full"
-                          >
-                            <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
-                              <div className="text-lg">⚡</div>
-                            </div>
-                            <h3 className="font-medium text-xs mb-1 text-green-400 group-hover:text-green-300 transition-colors leading-tight">
-                              {skill.tech}
-                            </h3>
-                            <div className="flex justify-center mb-1 scale-75">
-                              {renderStars(skill.score)}
-                            </div>
-                            <Badge
-                              variant="outline"
-                              className="border-green-500/50 text-green-400 text-xs px-1 py-0"
-                            >
-                              {skill.type}
-                            </Badge>
-                          </Link>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </motion.div>
-            </div>
+                <div
+                  className={config.scrollbar.className}
+                  style={{
+                    maxHeight: `${config.maxRowsInCollapsibleContent.techSkills * config.rowHeight.techSkills}px`,
+                  }}
+                >
+                  <motion.div
+                    className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    key={techFilter}
+                  >
+                    <AnimatePresence mode="wait">
+                      {filteredTechSkills.map((skill, index) => (
+                        <motion.div
+                          key={`${skill.tech}-${skill.url}-${techFilter}-${index}`}
+                          variants={itemVariants}
+                          layout
+                          layoutId={`${skill.tech}-${skill.url}`}
+                        >
+                          <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                            <CardContent className="p-3 flex flex-col items-center text-center">
+                              <Link
+                                href={skill.url}
+                                target="_blank"
+                                className="group w-full"
+                              >
+                                <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
+                                  <div className="text-lg">⚡</div>
+                                </div>
+                                <h3 className="font-medium text-xs mb-1 text-green-400 group-hover:text-green-300 transition-colors leading-tight">
+                                  {skill.tech}
+                                </h3>
+                                <div className="flex justify-center mb-1 scale-75">
+                                  {renderStars(skill.score)}
+                                </div>
+                                <Badge
+                                  variant="outline"
+                                  className="border-green-500/50 text-green-400 text-xs px-1 py-0"
+                                >
+                                  {skill.type}
+                                </Badge>
+                              </Link>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                  </motion.div>
+                </div>
+              </>
+            )}
           </CollapsibleContent>
         </Collapsible>
       </div>

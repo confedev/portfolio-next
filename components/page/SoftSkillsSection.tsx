@@ -36,6 +36,7 @@ interface SoftSkillsSectionProps {
   softSkillTypes: string[];
   onOpenChange: (open: boolean) => void;
   onFilterChange: (filter: string) => void;
+  isLoading?: boolean;
 }
 
 const containerVariants = {
@@ -83,6 +84,7 @@ export function SoftSkillsSection({
   softSkillTypes,
   onOpenChange,
   onFilterChange,
+  isLoading = false,
 }: SoftSkillsSectionProps) {
   return (
     <section id="soft-skills" className="py-16 px-4">
@@ -105,71 +107,82 @@ export function SoftSkillsSection({
           </CollapsibleTrigger>
 
           <CollapsibleContent className="mt-4">
-            <div className="mb-6 flex items-center gap-4">
-              <Filter className="h-5 w-5 text-green-400" />
-              <Select value={softSkillsFilter} onValueChange={onFilterChange}>
-                <SelectTrigger className="w-48 border-green-500/20">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">{t.softSkills.all}</SelectItem>
-                  {softSkillTypes.map((type) => (
-                    <SelectItem key={type} value={type}>
-                      {type}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            {isLoading ? (
+              <div className="flex justify-center items-center py-12">
+                <div className="w-8 h-8 rounded-full border-4 border-green-400 border-t-transparent animate-spin"></div>
+              </div>
+            ) : (
+              <>
+                <div className="mb-6 flex items-center gap-4">
+                  <Filter className="h-5 w-5 text-green-400" />
+                  <Select
+                    value={softSkillsFilter}
+                    onValueChange={onFilterChange}
+                  >
+                    <SelectTrigger className="w-48 border-green-500/20">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">{t.softSkills.all}</SelectItem>
+                      {softSkillTypes.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
 
-            <div
-              className={config.scrollbar.className}
-              style={{
-                maxHeight: `${config.maxRowsInCollapsibleContent.softSkills * config.rowHeight.softSkills}px`,
-              }}
-            >
-              <motion.div
-                className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                key={softSkillsFilter}
-              >
-                <AnimatePresence mode="wait">
-                  {filteredSoftSkills.map((skill, index) => (
-                    <motion.div
-                      key={`${skill.name}-${skill.url}-${softSkillsFilter}-${index}`}
-                      variants={itemVariants}
-                      layout
-                      layoutId={`${skill.name}-${skill.url}`}
-                    >
-                      <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
-                        <CardContent className="p-4">
-                          <Link
-                            href={skill.url}
-                            target="_blank"
-                            className="flex items-center gap-3 group"
-                          >
-                            <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
-                              <div className="text-sm">💡</div>
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold group-hover:text-green-400 transition-colors">
-                                {skill.name}
-                              </h3>
-                              <p className="text-sm text-muted-foreground">
-                                {skill.platform}
-                              </p>
-                            </div>
-                            <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          </Link>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </motion.div>
-            </div>
+                <div
+                  className={config.scrollbar.className}
+                  style={{
+                    maxHeight: `${config.maxRowsInCollapsibleContent.softSkills * config.rowHeight.softSkills}px`,
+                  }}
+                >
+                  <motion.div
+                    className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    key={softSkillsFilter}
+                  >
+                    <AnimatePresence mode="wait">
+                      {filteredSoftSkills.map((skill, index) => (
+                        <motion.div
+                          key={`${skill.name}-${skill.url}-${softSkillsFilter}-${index}`}
+                          variants={itemVariants}
+                          layout
+                          layoutId={`${skill.name}-${skill.url}`}
+                        >
+                          <Card className="border-green-500/20 bg-card/50 hover:bg-green-500/5 transition-colors">
+                            <CardContent className="p-4">
+                              <Link
+                                href={skill.url}
+                                target="_blank"
+                                className="flex items-center gap-3 group"
+                              >
+                                <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
+                                  <div className="text-sm">💡</div>
+                                </div>
+                                <div className="flex-1">
+                                  <h3 className="font-semibold group-hover:text-green-400 transition-colors">
+                                    {skill.name}
+                                  </h3>
+                                  <p className="text-sm text-muted-foreground">
+                                    {skill.platform}
+                                  </p>
+                                </div>
+                                <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </Link>
+                            </CardContent>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                  </motion.div>
+                </div>
+              </>
+            )}
           </CollapsibleContent>
         </Collapsible>
       </div>
