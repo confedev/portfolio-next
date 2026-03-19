@@ -149,7 +149,7 @@ export function CertificationsSection({
                     animate="visible"
                     key={certificationsFilter}
                   >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                       {filteredCertifications.map((cert, index) => (
                         <motion.div
                           key={`${cert.name}-${cert.url}-${certificationsFilter}-${index}`}

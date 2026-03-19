@@ -155,7 +155,7 @@ export function TechSkillsSection({
                     animate="visible"
                     key={techFilter}
                   >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                       {filteredTechSkills.map((skill, index) => (
                         <motion.div
                           key={`${skill.tech}-${skill.url}-${techFilter}-${index}`}

@@ -146,7 +146,7 @@ export function SoftSkillsSection({
                     animate="visible"
                     key={softSkillsFilter}
                   >
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                       {filteredSoftSkills.map((skill, index) => (
                         <motion.div
                           key={`${skill.name}-${skill.url}-${softSkillsFilter}-${index}`}
