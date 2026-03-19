@@ -20,3 +20,5 @@ README.md
 .husky/
 .prettierignore
 *.svg
+*.png
+*.ico
