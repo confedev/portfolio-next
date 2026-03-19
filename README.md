@@ -1,4 +1,4 @@
-<h1 align="center">✨ Developer Portfolio</h1>
+<h1 align="center">✨ ConfeDev Portfolio</h1>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" />
