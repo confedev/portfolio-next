@@ -1,15 +1,158 @@
 [
   {
     "name": {
-      "en": "Team Leadership",
-      "es": "Liderazgo de Equipos"
+      "en": "Problem Solving",
+      "es": "Resolución de Problemas"
     },
-    "platform": "Coursera",
-    "url": "https://www.coursera.org/",
+    "platform": "",
+    "url": "",
     "type": {
-      "en": "leadership",
-      "es": "liderazgo"
+      "en": "Cognitive",
+      "es": "Cognitivo"
     },
-    "icon": "./icon/leadership.svg"
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Leadership and Coordination",
+      "es": "Liderazgo y Coordinación"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Management",
+      "es": "Gestión"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Adaptability",
+      "es": "Adaptabilidad"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Versatility",
+      "es": "Versatilidad"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Process Standardization",
+      "es": "Estandarización de Procesos"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Methodology",
+      "es": "Metodología"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Fast Learner",
+      "es": "Aprendizaje Rápido"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Cognitive",
+      "es": "Cognitivo"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Effective Communication",
+      "es": "Comunicación Efectiva"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Interpersonal",
+      "es": "Interpersonal"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Peer Support and Teamwork",
+      "es": "Apoyo a Pares y Trabajo en Equipo"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Collaboration",
+      "es": "Colaboración"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Organization and Planning",
+      "es": "Organización y Planificación"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Productivity",
+      "es": "Productividad"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Customer Service Excellence",
+      "es": "Excelencia en Servicio al Cliente"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "External Relations",
+      "es": "Relaciones Externas"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Resilience and Stress Management",
+      "es": "Resiliencia y Manejo de Estrés"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Self-Management",
+      "es": "Autogestión"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Continuous Improvement",
+      "es": "Mejora Continua"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Growth",
+      "es": "Crecimiento"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Professional Integrity",
+      "es": "Integridad Profesional"
+    },
+    "platform": "",
+    "url": "",
+    "type": {
+      "en": "Ethics",
+      "es": "Ética"
+    },
+    "icon": ""
   }
 ]

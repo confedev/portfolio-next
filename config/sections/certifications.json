@@ -280,8 +280,8 @@
     "platform": "Coursera",
     "url": "",
     "type": {
-      "en": "data science",
-      "es": "ciencia de datos"
+      "en": "ai",
+      "es": "ia"
     },
     "icon": ""
   },
@@ -306,8 +306,8 @@
     "platform": "HackerRank",
     "url": "",
     "type": {
-      "en": "certification",
-      "es": "certificación"
+      "en": "backend",
+      "es": "backend"
     },
     "icon": ""
   },
@@ -319,8 +319,8 @@
     "platform": "HackerRank",
     "url": "",
     "type": {
-      "en": "certification",
-      "es": "certificación"
+      "en": "backend",
+      "es": "backend"
     },
     "icon": ""
   },

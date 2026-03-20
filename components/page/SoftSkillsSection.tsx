@@ -169,7 +169,7 @@ export function SoftSkillsSection({
                                     {skill.name}
                                   </h3>
                                   <p className="text-sm text-muted-foreground">
-                                    {skill.platform}
+                                    {skill.type}
                                   </p>
                                 </div>
                                 <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
