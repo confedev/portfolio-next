@@ -1,16 +1,16 @@
 [
   {
     "name": {
-      "en": "Higher Level Technician Analyst Programmer",
+      "en": "Higher Level Technician Programmer Analyst",
       "es": "Técnico de Nivel Superior Analista Programador"
     },
     "platform": "INACAP",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "technical",
-      "es": "técnico"
+      "en": "education",
+      "es": "educación"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -18,12 +18,12 @@
       "es": "Angular: De cero a experto (Angular 10+)"
     },
     "platform": "Udemy",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "framework",
-      "es": "framework"
+      "en": "frontend",
+      "es": "frontend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -31,142 +31,38 @@
       "es": "Desarrollo web con Spring Boot 2 y Spring Framework 5"
     },
     "platform": "Udemy",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "web-development",
-      "es": "desarrollo web"
+      "en": "backend",
+      "es": "backend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
-      "en": "Spring Framework 5: Creating Webapp from Zero to Expert",
+      "en": "Spring Framework 5: Creating webapps from Zero to Expert",
       "es": "Spring Framework 5: Creando webapp de cero a experto"
     },
     "platform": "Udemy",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "framework",
-      "es": "framework"
+      "en": "backend",
+      "es": "backend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
-      "en": "DevOps Specialization Diploma",
+      "en": "Diploma in DevOps Specialization",
       "es": "Diplomado en Especialización DevOps"
     },
     "platform": "Capacitación USACH",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "DevOps Diploma - CORFO",
-      "es": "Diplomado DevOps - CORFO"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in Logs and Metrics",
-      "es": "Certificado en Logs y Métricas"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in Development and Construction",
-      "es": "Certificado en Desarrollo y Construcción"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in Continuous Integration",
-      "es": "Certificado en Integración Continua"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in Automated Testing",
-      "es": "Certificado en Pruebas Automatizadas"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in Operations and Scaling",
-      "es": "Certificado en Operaciones y Escalamiento"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Certificate in DevOps Fundamentals and Adoption",
-      "es": "Certificado en Fundamentos y Adopción de DevOps"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "devops",
-      "es": "devops"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "AWS Academy Graduate - AWS Academy Cloud Foundations",
-      "es": "AWS Academy Graduate - AWS Academy Cloud Foundations"
-    },
-    "platform": "Credly",
-    "url": "https://example.com",
-    "type": {
-      "en": "cloud",
-      "es": "nube"
-    },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -174,12 +70,12 @@
       "es": "DevOps Foundation"
     },
     "platform": "DevOps Institute",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -187,12 +83,12 @@
       "es": "Curso Básico de Jenkins"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -200,12 +96,12 @@
       "es": "Curso de Backend con NestJS"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "web-development",
-      "es": "desarrollo web"
+      "en": "backend",
+      "es": "backend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -213,25 +109,25 @@
       "es": "Curso de Docker"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
-      "en": "Practical AWS Cloud Course",
+      "en": "AWS Cloud Practical Course",
       "es": "Curso Práctico de AWS Cloud"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "cloud",
       "es": "nube"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -239,12 +135,12 @@
       "es": "Curso Profesional DevOps"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -252,12 +148,12 @@
       "es": "Curso de Kubernetes"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "devops",
       "es": "devops"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -265,38 +161,12 @@
       "es": "Curso de Java Spring"
     },
     "platform": "Platzi",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "framework",
-      "es": "framework"
+      "en": "backend",
+      "es": "backend"
     },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "Risk Control in Remote Work",
-      "es": "Control de Riesgos en Teletrabajo"
-    },
-    "platform": "Mutual de Seguridad",
-    "url": "https://example.com",
-    "type": {
-      "en": "safety",
-      "es": "seguridad"
-    },
-    "icon": "./icon/placeholder.svg"
-  },
-  {
-    "name": {
-      "en": "AWS Certified Cloud Practitioner",
-      "es": "AWS Certified Cloud Practitioner"
-    },
-    "platform": "A Cloud Guru",
-    "url": "https://example.com",
-    "type": {
-      "en": "cloud",
-      "es": "nube"
-    },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -304,12 +174,12 @@
       "es": "AWS Certified Cloud Practitioner"
     },
     "platform": "AWS",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "cloud",
       "es": "nube"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -317,12 +187,12 @@
       "es": "Scrum Foundation"
     },
     "platform": "Certiprof",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "agile",
-      "es": "ágil"
+      "es": "agilidad"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -330,25 +200,25 @@
       "es": "Curso de AWS Certified Developer Associate DVA-C02"
     },
     "platform": "Udemy",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "cloud",
       "es": "nube"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
-      "en": "The Heart of Agility",
-      "es": "El corazón de la agilidad"
+      "en": "React: From Zero to Expert - 2025 Edition",
+      "es": "React: De cero a experto - Edición 2025"
     },
-    "platform": "Acid Labs",
-    "url": "https://example.com",
+    "platform": "Udemy",
+    "url": "",
     "type": {
-      "en": "agile",
-      "es": "ágil"
+      "en": "frontend",
+      "es": "frontend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -356,12 +226,12 @@
       "es": "Técnicas de Liderazgo"
     },
     "platform": "Coursera",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "leadership",
       "es": "liderazgo"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -369,25 +239,25 @@
       "es": "Prompt Engineering for ChatGPT"
     },
     "platform": "Coursera",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "ai",
-      "es": "inteligencia artificial"
+      "es": "ia"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
-      "en": "Practical GitHub Copilot",
-      "es": "Practical GitHub Copilot"
+      "en": "Practical Github Copilot",
+      "es": "Practical Github Copilot"
     },
     "platform": "LinkedIn Learning",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "ai",
-      "es": "inteligencia artificial"
+      "es": "ia"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -395,12 +265,12 @@
       "es": "Generative AI Primer"
     },
     "platform": "Coursera",
-    "url": "https://example.com",
+    "url": "",
     "type": {
       "en": "ai",
-      "es": "inteligencia artificial"
+      "es": "ia"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -408,12 +278,12 @@
       "es": "Python for Data Science and AI"
     },
     "platform": "Coursera",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "programming",
-      "es": "programación"
+      "en": "data science",
+      "es": "ciencia de datos"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -421,12 +291,12 @@
       "es": "Getting Started with Go"
     },
     "platform": "Coursera",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "programming",
-      "es": "programación"
+      "en": "backend",
+      "es": "backend"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
@@ -434,24 +304,102 @@
       "es": "Sr. Software Engineer"
     },
     "platform": "HackerRank",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "programming",
-      "es": "programación"
+      "en": "certification",
+      "es": "certificación"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
   },
   {
     "name": {
       "en": "REST API (Intermediate)",
-      "es": "REST API (Intermedio)"
+      "es": "REST API (Intermediate)"
     },
     "platform": "HackerRank",
-    "url": "https://example.com",
+    "url": "",
     "type": {
-      "en": "api",
-      "es": "api"
+      "en": "certification",
+      "es": "certificación"
     },
-    "icon": "./icon/placeholder.svg"
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Model Context Protocol (MCP) Mastery",
+      "es": "Model Context Protocol (MCP) Mastery"
+    },
+    "platform": "Coursera",
+    "url": "",
+    "type": {
+      "en": "ai",
+      "es": "ia"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Functions, Methods, and Interfaces in Go",
+      "es": "Functions, Methods, and Interfaces in Go"
+    },
+    "platform": "Coursera",
+    "url": "",
+    "type": {
+      "en": "backend",
+      "es": "backend"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Concurrency in Go",
+      "es": "Concurrency in Go"
+    },
+    "platform": "Coursera",
+    "url": "",
+    "type": {
+      "en": "backend",
+      "es": "backend"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Cybersecurity Procedures for Information Protection",
+      "es": "Procedimientos de ciberseguridad para la protección de la información"
+    },
+    "platform": "CapHome",
+    "url": "",
+    "type": {
+      "en": "security",
+      "es": "ciberseguridad"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "Cybersecurity",
+      "es": "Ciberseguridad"
+    },
+    "platform": "CapHome",
+    "url": "",
+    "type": {
+      "en": "security",
+      "es": "ciberseguridad"
+    },
+    "icon": ""
+  },
+  {
+    "name": {
+      "en": "AWS Cloud Quest: Recertify Cloud Practitioner",
+      "es": "AWS Cloud Quest: Recertify Cloud Practitioner"
+    },
+    "platform": "AWS",
+    "url": "",
+    "type": {
+      "en": "cloud",
+      "es": "nube"
+    },
+    "icon": ""
   }
 ]
