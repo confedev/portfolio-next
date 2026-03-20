@@ -75,7 +75,7 @@ const itemVariants = {
       duration: 0.2,
     },
   },
-};
+} as const;
 
 export function TechSkillsSection({
   t,

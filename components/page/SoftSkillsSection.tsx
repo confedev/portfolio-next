@@ -74,7 +74,7 @@ const itemVariants = {
       duration: 0.25,
     },
   },
-};
+} as const;
 
 export function SoftSkillsSection({
   t,

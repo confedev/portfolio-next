@@ -75,7 +75,7 @@ const itemVariants = {
       duration: 0.3,
     },
   },
-};
+} as const;
 
 export function CertificationsSection({
   t,
