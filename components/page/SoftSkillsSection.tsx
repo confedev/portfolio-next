@@ -159,7 +159,7 @@ export function SoftSkillsSection({
                               <Link
                                 href={skill.url}
                                 target="_blank"
-                                className="flex items-center gap-3 group"
+                                className="flex items-center gap-3 group pointer-events-none"
                               >
                                 <div className="w-8 h-8 bg-green-500/10 rounded-full flex items-center justify-center">
                                   <div className="text-sm">💡</div>

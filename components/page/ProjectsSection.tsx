@@ -101,7 +101,7 @@ export function ProjectsSection({
                         <Link href={project.url} target="_blank">
                           <Button
                             variant="outline"
-                            className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent"
+                            className="w-full border-green-500/20 hover:bg-green-500/10 bg-transparent pointer-events-none"
                           >
                             Ver Proyecto{' '}
                             <ExternalLink className="ml-2 h-4 w-4" />

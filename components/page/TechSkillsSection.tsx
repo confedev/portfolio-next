@@ -168,7 +168,7 @@ export function TechSkillsSection({
                               <Link
                                 href={skill.url}
                                 target="_blank"
-                                className="group w-full"
+                                className="group w-full pointer-events-none"
                               >
                                 <div className="w-10 h-10 mx-auto mb-2 bg-green-500/10 rounded-full flex items-center justify-center">
                                   <div className="text-lg">⚡</div>

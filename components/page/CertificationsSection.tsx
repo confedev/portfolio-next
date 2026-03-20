@@ -162,7 +162,7 @@ export function CertificationsSection({
                               <Link
                                 href={cert.url}
                                 target="_blank"
-                                className="group"
+                                className="group pointer-events-none"
                               >
                                 <div className="flex items-center gap-3 mb-3">
                                   <div className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center">
