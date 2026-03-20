@@ -250,16 +250,6 @@
     }
   },
   {
-    "tech": "Eclipse",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "IDE",
-      "es": "IDE"
-    }
-  },
-  {
     "tech": "Git",
     "icon": "",
     "url": "",
@@ -280,16 +270,6 @@
     }
   },
   {
-    "tech": "Maven",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "tool",
-      "es": "herramienta"
-    }
-  },
-  {
     "tech": "Nginx",
     "icon": "",
     "url": "",
@@ -300,27 +280,7 @@
     }
   },
   {
-    "tech": "NPM",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "tool",
-      "es": "herramienta"
-    }
-  },
-  {
     "tech": "PM2",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "tool",
-      "es": "herramienta"
-    }
-  },
-  {
-    "tech": "Postman",
     "icon": "",
     "url": "",
     "score": 5,
@@ -390,7 +350,7 @@
     }
   },
   {
-    "tech": "jest",
+    "tech": "Jest",
     "icon": "",
     "url": "",
     "score": 5,
@@ -431,16 +391,6 @@
   },
   {
     "tech": "C#",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "language",
-      "es": "lenguaje"
-    }
-  },
-  {
-    "tech": "Groovy",
     "icon": "",
     "url": "",
     "score": 5,
@@ -650,6 +600,16 @@
     }
   },
   {
+    "tech": "Claude Code",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "AI tool",
+      "es": "herramienta IA"
+    }
+  },
+  {
     "tech": "Github Action",
     "icon": "",
     "url": "",
@@ -710,16 +670,6 @@
     }
   },
   {
-    "tech": "SSE",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "protocol",
-      "es": "protocolo"
-    }
-  },
-  {
     "tech": "AWS S3",
     "icon": "",
     "url": "",
@@ -731,16 +681,6 @@
   },
   {
     "tech": "AWS SNS",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "cloud service",
-      "es": "servicio nube"
-    }
-  },
-  {
-    "tech": "AWS CI/CD",
     "icon": "",
     "url": "",
     "score": 5,
@@ -790,17 +730,17 @@
     }
   },
   {
-    "tech": "Windows Server",
+    "tech": "RabbitMQ",
     "icon": "",
     "url": "",
     "score": 5,
     "type": {
-      "en": "OS",
-      "es": "sistema operativo"
+      "en": "protocol",
+      "es": "protocolo"
     }
   },
   {
-    "tech": "MQTT",
+    "tech": "Apache Kafka",
     "icon": "",
     "url": "",
     "score": 5,
@@ -817,16 +757,6 @@
     "type": {
       "en": "library",
       "es": "librería"
-    }
-  },
-  {
-    "tech": "SoapUI",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "tool",
-      "es": "herramienta"
     }
   },
   {
@@ -900,6 +830,16 @@
     }
   },
   {
+    "tech": "GCP",
+    "icon": "",
+    "url": "",
+    "score": 5,
+    "type": {
+      "en": "cloud provider",
+      "es": "proveedor nube"
+    }
+  },
+  {
     "tech": "Elastic Search",
     "icon": "",
     "url": "",
@@ -940,26 +880,6 @@
     }
   },
   {
-    "tech": "NuGet",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "tool",
-      "es": "herramienta"
-    }
-  },
-  {
-    "tech": "PowerShell",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "language",
-      "es": "lenguaje"
-    }
-  },
-  {
     "tech": "Terraform",
     "icon": "",
     "url": "",
@@ -987,16 +907,6 @@
     "type": {
       "en": "tool",
       "es": "herramienta"
-    }
-  },
-  {
-    "tech": "Sharepoint",
-    "icon": "",
-    "url": "",
-    "score": 5,
-    "type": {
-      "en": "platform",
-      "es": "plataforma"
     }
   },
   {
