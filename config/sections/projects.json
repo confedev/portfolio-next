@@ -1,98 +1,194 @@
 [
   {
     "name": {
-      "en": "Website for Veterinary",
-      "es": "Sitio Web para Veterinaria"
+      "en": "Operational Control System for Healthcare",
+      "es": "Sistema de Control Operativo para Salud"
     },
     "description": {
-      "en": "A complete web application for veterinary services with appointment system and patient management",
-      "es": "Una aplicación web completa para servicios veterinarios con sistema de citas y gestión de pacientes"
+      "en": "ERP with custom functionalities for clinics and hospitals using HL7 standards.",
+      "es": "ERP con funcionalidades personalizadas para clínicas y hospitales bajo el estándar HL7."
     },
-    "url": "https://www.veterinaryservices.com",
-    "image": "./images/veterinary.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "healthcare",
-      "es": "salud"
+      "en": "Healthcare",
+      "es": "Salud"
     }
   },
   {
     "name": {
-      "en": "Technology E-commerce",
-      "es": "E-commerce de Tecnología"
+      "en": "Digital Works Log Management System",
+      "es": "Sistema de Gestión de Libro de Obras Digital"
     },
     "description": {
-      "en": "E-commerce platform with shopping cart, payments and inventory management",
-      "es": "Plataforma de comercio electrónico con carrito de compras, pagos y gestión de inventario"
+      "en": "Platform for managing contracts, digital signatures, and documentation for public and private infrastructure projects.",
+      "es": "Plataforma para la gestión de contratos, firma digital y documentación de proyectos de infraestructura pública y privada."
     },
-    "url": "https://www.techstore.com",
-    "image": "./images/ecommerce.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "technology",
-      "es": "tecnología"
+      "en": "Construction",
+      "es": "Construcción"
     }
   },
   {
     "name": {
-      "en": "Financial Management App",
-      "es": "App de Gestión Financiera"
+      "en": "Automotive Commercial ERP",
+      "es": "ERP Comercial Automotriz"
     },
     "description": {
-      "en": "Mobile application for personal expense tracking and financial planning",
-      "es": "Aplicación móvil para el seguimiento de gastos personales y planificación financiera"
+      "en": "System focused on the purchase and sale of vehicles, technical specifications, and parts certification.",
+      "es": "Sistema enfocado a la compra y venta de autos, especificaciones técnicas y certificación de piezas."
     },
-    "url": "https://www.financeapp.com",
-    "image": "./images/finance.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "finance",
-      "es": "finanzas"
+      "en": "Automotive",
+      "es": "Automotriz"
     }
   },
   {
     "name": {
-      "en": "School Management System",
-      "es": "Sistema de Gestión Escolar"
+      "en": "Service Provider Compliance System",
+      "es": "Sistema de Cumplimiento de Proveedores de Servicios"
     },
     "description": {
-      "en": "Comprehensive platform for educational institution administration",
-      "es": "Plataforma integral para la administración de instituciones educativas"
+      "en": "Intermediary platform for managing technical documentation, SAP integration, and finding traceability.",
+      "es": "Plataforma intermediaria para la gestión de documentación técnica, integración con SAP y trazabilidad de hallazgos."
     },
-    "url": "https://www.schoolmanagement.com",
-    "image": "./images/education.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "education",
-      "es": "educación"
+      "en": "Utilities",
+      "es": "Servicios Básicos"
     }
   },
   {
     "name": {
-      "en": "Analytics Dashboard",
-      "es": "Dashboard de Analytics"
+      "en": "Retail Analytics and Connectivity Suite",
+      "es": "Suite de Analítica y Conectividad para Retail"
     },
     "description": {
-      "en": "Control panel for real-time business data and metrics visualization",
-      "es": "Panel de control para visualización de datos y métricas empresariales en tiempo real"
+      "en": "Captive portal and analytics dashboard for real-time tracking of movement and demographics in shopping centers.",
+      "es": "Portal cautivo y dashboard de analítica para seguimiento en tiempo real de movimientos y demografía en centros comerciales."
     },
-    "url": "https://www.analytics-dashboard.com",
-    "image": "./images/analytics.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "analytics",
-      "es": "análisis"
+      "en": "Retail",
+      "es": "Comercio"
     }
   },
   {
     "name": {
-      "en": "Social Network for Developers",
-      "es": "Red Social para Desarrolladores"
+      "en": "Integrated Call Recording and Billing Solution",
+      "es": "Solución Integrada de Grabación y Tarificación de Llamadas"
     },
     "description": {
-      "en": "Social platform specialized for the software developer community",
-      "es": "Plataforma social especializada para la comunidad de desarrolladores de software"
+      "en": "Product suite for capturing, recording, and billing telephony services with real-time KPI tracking.",
+      "es": "Suite de productos para captura, grabación y tarificación de servicios de telefonía con seguimiento de KPI en tiempo real."
     },
-    "url": "https://www.devsocial.com",
-    "image": "./images/social.png",
+    "url": "",
+    "image": "",
     "sector": {
-      "en": "technology",
-      "es": "tecnología"
+      "en": "Telecommunications",
+      "es": "Telecomunicaciones"
+    }
+  },
+  {
+    "name": {
+      "en": "Mining Operations Management System",
+      "es": "Sistema de Gestión de Operaciones Mineras"
+    },
+    "description": {
+      "en": "Backoffice system for the complete management of mining processes and SAP connectivity.",
+      "es": "Sistema de backoffice para la gestión completa de procesos mineros y conexión con SAP."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "Mining",
+      "es": "Minería"
+    }
+  },
+  {
+    "name": {
+      "en": "Workplace Access and Resource Control System",
+      "es": "Sistema de Control de Acceso y Recursos Laborales"
+    },
+    "description": {
+      "en": "Platform for managing office space bookings, parking, and entry/exit tracking via QR codes.",
+      "es": "Plataforma para la gestión de reservas de espacios de oficina, estacionamientos y seguimiento de entrada/salida mediante códigos QR."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "Corporate",
+      "es": "Corporativo"
+    }
+  },
+  {
+    "name": {
+      "en": "Social Security Benefit Management Portal",
+      "es": "Portal de Gestión de Beneficios de Seguridad Social"
+    },
+    "description": {
+      "en": "Internal and external portals for managing discounts and pension database synchronization.",
+      "es": "Portales interno y externo para la gestión de descuentos y sincronización de bases de datos de pensiones."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "Government",
+      "es": "Gubernamental"
+    }
+  },
+  {
+    "name": {
+      "en": "Logistics and ERP Integration Middleware",
+      "es": "Middleware de Integración Logística y ERP"
+    },
+    "description": {
+      "en": "Synchronization system between logistics ERPs for invoice management and purchase order control.",
+      "es": "Sistema de sincronización entre ERPs logísticos para el manejo de facturas y control de órdenes de compra."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "Logistics",
+      "es": "Logística"
+    }
+  },
+  {
+    "name": {
+      "en": "Infrastructure as Code and DevOps Implementation",
+      "es": "Implementación de DevOps e Infraestructura como Código"
+    },
+    "description": {
+      "en": "Organization-wide automation using CI/CD strategies, containerization, and cloud infrastructure management.",
+      "es": "Automatización a nivel organizacional mediante estrategias CI/CD, contenedorización y gestión de infraestructura en la nube."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "Technology",
+      "es": "Tecnología"
+    }
+  },
+  {
+    "name": {
+      "en": "Multi-Platform E-commerce BFF Solutions",
+      "es": "Soluciones BFF para Comercio Electrónico Multi-Plataforma"
+    },
+    "description": {
+      "en": "Centralized microservices and Backend-for-Frontend architecture for retail mobile applications and regional e-commerce.",
+      "es": "Microservicios centralizados y arquitectura Backend-for-Frontend para aplicaciones móviles de retail y comercio electrónico regional."
+    },
+    "url": "",
+    "image": "",
+    "sector": {
+      "en": "E-commerce",
+      "es": "Comercio Electrónico"
     }
   }
 ]
