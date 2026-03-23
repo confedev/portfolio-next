@@ -11,7 +11,7 @@ export const config = {
   // Height per row in pixels for different sections (used to calculate scroll height)
   rowHeight: {
     techSkills: 160, // Compact height per row for small tech skills cards (including gaps)
-    softSkills: 220, // Approximate height per row for soft skills cards (including gaps)
+    softSkills: 90, // Approximate height per row for soft skills cards (including gaps)
     certifications: 280, // Approximate height per row for certification cards (including gaps)
     projects: 320, // Approximate height per row for project cards (including gaps)
   },
