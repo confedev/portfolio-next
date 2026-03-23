@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Form,
   FormControl,
@@ -42,6 +43,7 @@ const createFormSchema = (t: Content) =>
       .email(t.contactModal.invalidEmail),
     company: z.string().min(1, t.contactModal.required),
     phone: z.string().optional(),
+    message: z.string().min(1, t.contactModal.required),
   });
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
@@ -51,7 +53,7 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
 
   // Formspree hook
   const [formspreeState, submitToFormspree] = useFormspreeForm(
-    process.env.NEXT_PUBLIC_FORMSPREE_ID,
+    process.env.NEXT_PUBLIC_FORMSPREE_ID as string,
   );
 
   const formSchema = createFormSchema(t);
@@ -65,6 +67,7 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
       email: '',
       company: '',
       phone: '',
+      message: '',
     },
   });
 
@@ -79,7 +82,10 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
         onOpenChange(false);
       }, 3000);
       return () => clearTimeout(successTimer);
-    } else if (formspreeState.errors && formspreeState.errors.length > 0) {
+    } else if (
+      formspreeState.errors &&
+      formspreeState.errors.getAllFieldErrors().length > 0
+    ) {
       setFormState('error');
       // Return to initial state after 3 seconds
       const errorTimer = setTimeout(() => setFormState('idle'), 3000);
@@ -268,6 +274,26 @@ export function ContactModal({ open, onOpenChange, t }: ContactModalProps) {
                         {...field}
                         type="tel"
                         placeholder="+1 234 567 8900"
+                        className="border-green-500/20 focus:border-green-400 bg-background/50"
+                        disabled={formState === 'sending'}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-green-400">
+                      {t.contactModal.message}
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        {...field}
                         className="border-green-500/20 focus:border-green-400 bg-background/50"
                         disabled={formState === 'sending'}
                       />

@@ -111,5 +111,6 @@ export const CONTENT_ES: Content = {
     invalidEmail: 'Ingresa un correo electrónico válido',
     tryAgain: 'Intentar de nuevo',
     autoCloseMessage: 'Este modal se cerrará automáticamente...',
+    message: 'Mensaje',
   },
 };
